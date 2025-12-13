@@ -1,0 +1,568 @@
+{
+    "fournisseurs": [
+        {
+            "id": "f001",
+            "nom": "Ferme du Soleil",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermedusoleil.fr",
+                "telephone": "04 67 12 34 56"
+            },
+            "localisation": {
+                "adresse": "Route des Vignes",
+                "ville": "Montpellier",
+                "code_postal": "34000",
+                "distance_km": 25
+            },
+            "labels": [
+                "bio",
+                "local",
+                "HVE"
+            ],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "mardi",
+                "vendredi"
+            ],
+            "minimum_commande_euro": 50,
+            "produits": [
+                {
+                    "id": "p001",
+                    "nom": "Lentilles vertes du Puy",
+                    "categorie": "legumineuses",
+                    "unite": "kg",
+                    "prix_unitaire": 3.80,
+                    "bio": true,
+                    "origine": "France",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                },
+                {
+                    "id": "p002",
+                    "nom": "Carottes bio",
+                    "categorie": "legumes",
+                    "unite": "kg",
+                    "prix_unitaire": 1.80,
+                    "bio": true,
+                    "origine": "Local",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                },
+                {
+                    "id": "p003",
+                    "nom": "Courgettes",
+                    "categorie": "legumes",
+                    "unite": "kg",
+                    "prix_unitaire": 2.50,
+                    "bio": true,
+                    "origine": "Local",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                },
+                {
+                    "id": "p004",
+                    "nom": "Pommes Golden",
+                    "categorie": "fruits",
+                    "unite": "kg",
+                    "prix_unitaire": 2.50,
+                    "bio": true,
+                    "origine": "Local",
+                    "disponibilite_mois": [
+                        9,
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f002",
+            "nom": "Coopérative Maritime Méditerranée",
+            "type": "grossiste",
+            "contact": {
+                "email": "pro@coopmaritime.fr",
+                "telephone": "04 99 88 77 66"
+            },
+            "localisation": {
+                "adresse": "Port de Sète",
+                "ville": "Sète",
+                "code_postal": "34200",
+                "distance_km": 45
+            },
+            "labels": [
+                "MSC",
+                "pêche durable"
+            ],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "lundi",
+                "mercredi",
+                "vendredi"
+            ],
+            "minimum_commande_euro": 100,
+            "produits": [
+                {
+                    "id": "p010",
+                    "nom": "Filet de cabillaud",
+                    "categorie": "poisson",
+                    "unite": "kg",
+                    "prix_unitaire": 15.00,
+                    "bio": false,
+                    "origine": "Atlantique Nord",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": [
+                        "poisson"
+                    ]
+                },
+                {
+                    "id": "p011",
+                    "nom": "Filet de merlu",
+                    "categorie": "poisson",
+                    "unite": "kg",
+                    "prix_unitaire": 12.50,
+                    "bio": false,
+                    "origine": "Méditerranée",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": [
+                        "poisson"
+                    ]
+                },
+                {
+                    "id": "p012",
+                    "nom": "Crevettes roses",
+                    "categorie": "crustaces",
+                    "unite": "kg",
+                    "prix_unitaire": 18.00,
+                    "bio": false,
+                    "origine": "Méditerranée",
+                    "disponibilite_mois": [
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10
+                    ],
+                    "allergenes": [
+                        "crustaces"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f003",
+            "nom": "Laiterie des Cévennes",
+            "type": "producteur",
+            "contact": {
+                "email": "commandes@laiteriecevennes.fr",
+                "telephone": "04 66 55 44 33"
+            },
+            "localisation": {
+                "adresse": "Chemin de la Ferme",
+                "ville": "Florac",
+                "code_postal": "48400",
+                "distance_km": 120
+            },
+            "labels": [
+                "bio",
+                "AOP"
+            ],
+            "delai_livraison_jours": 3,
+            "jours_livraison": [
+                "mardi",
+                "jeudi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p020",
+                    "nom": "Yaourt nature bio",
+                    "categorie": "produit_laitier",
+                    "unite": "kg",
+                    "prix_unitaire": 2.80,
+                    "bio": true,
+                    "origine": "Cévennes",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": [
+                        "lait"
+                    ]
+                },
+                {
+                    "id": "p021",
+                    "nom": "Fromage frais",
+                    "categorie": "produit_laitier",
+                    "unite": "kg",
+                    "prix_unitaire": 8.50,
+                    "bio": true,
+                    "origine": "Cévennes",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": [
+                        "lait"
+                    ]
+                },
+                {
+                    "id": "p022",
+                    "nom": "Comté AOP 12 mois",
+                    "categorie": "fromage",
+                    "unite": "kg",
+                    "prix_unitaire": 22.00,
+                    "bio": false,
+                    "origine": "Jura",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": [
+                        "lait"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f004",
+            "nom": "Volailles du Languedoc",
+            "type": "producteur",
+            "contact": {
+                "email": "ventes@volailleslanguedoc.fr",
+                "telephone": "04 67 99 88 77"
+            },
+            "localisation": {
+                "adresse": "Domaine de la Basse-Cour",
+                "ville": "Castelnau-le-Lez",
+                "code_postal": "34170",
+                "distance_km": 15
+            },
+            "labels": [
+                "Label Rouge",
+                "local"
+            ],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "lundi",
+                "jeudi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p030",
+                    "nom": "Poulet fermier",
+                    "categorie": "viande",
+                    "unite": "kg",
+                    "prix_unitaire": 8.50,
+                    "bio": false,
+                    "origine": "Local",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                },
+                {
+                    "id": "p031",
+                    "nom": "Oeufs fermiers plein air",
+                    "categorie": "oeufs",
+                    "unite": "douzaine",
+                    "prix_unitaire": 4.50,
+                    "bio": false,
+                    "origine": "Local",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": [
+                        "oeufs"
+                    ]
+                },
+                {
+                    "id": "p032",
+                    "nom": "Cuisses de canard",
+                    "categorie": "viande",
+                    "unite": "kg",
+                    "prix_unitaire": 12.00,
+                    "bio": false,
+                    "origine": "Sud-Ouest",
+                    "disponibilite_mois": [
+                        9,
+                        10,
+                        11,
+                        12,
+                        1,
+                        2
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f005",
+            "nom": "ProDistrib Épicerie",
+            "type": "grossiste",
+            "contact": {
+                "email": "commandes@prodistrib.fr",
+                "telephone": "04 67 11 22 33"
+            },
+            "localisation": {
+                "adresse": "Zone Industrielle Nord",
+                "ville": "Montpellier",
+                "code_postal": "34000",
+                "distance_km": 10
+            },
+            "labels": [],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "lundi",
+                "mardi",
+                "mercredi",
+                "jeudi",
+                "vendredi"
+            ],
+            "minimum_commande_euro": 200,
+            "produits": [
+                {
+                    "id": "p040",
+                    "nom": "Huile d'olive extra vierge",
+                    "categorie": "epicerie",
+                    "unite": "litre",
+                    "prix_unitaire": 8.00,
+                    "bio": false,
+                    "origine": "Espagne",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                },
+                {
+                    "id": "p041",
+                    "nom": "Pâtes sèches",
+                    "categorie": "feculents",
+                    "unite": "kg",
+                    "prix_unitaire": 1.50,
+                    "bio": false,
+                    "origine": "Italie",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": [
+                        "gluten"
+                    ]
+                },
+                {
+                    "id": "p042",
+                    "nom": "Riz basmati",
+                    "categorie": "feculents",
+                    "unite": "kg",
+                    "prix_unitaire": 2.20,
+                    "bio": false,
+                    "origine": "Inde",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                },
+                {
+                    "id": "p043",
+                    "nom": "Lentilles corail",
+                    "categorie": "legumineuses",
+                    "unite": "kg",
+                    "prix_unitaire": 4.50,
+                    "bio": false,
+                    "origine": "Turquie",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                },
+                {
+                    "id": "p044",
+                    "nom": "Curry en poudre",
+                    "categorie": "epices",
+                    "unite": "kg",
+                    "prix_unitaire": 25.00,
+                    "bio": false,
+                    "origine": "Inde",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "version": "1.0",
+        "last_updated": "2024-12-13",
+        "description": "Catalogue des fournisseurs de la cantine avec leurs produits disponibles"
+    }
+}

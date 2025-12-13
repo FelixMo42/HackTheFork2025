@@ -1,0 +1,105 @@
+{
+  "document_reference": "Recommandation Nutrition du GEM-RCN, Version 2.0 (Juillet 2015)",
+  "frequence_reference": "20 repas successifs (déjeuners)",
+  "populations": {
+    "petite_enfance": {
+      "label": "Petite Enfance (0-3 ans)",
+      "age_min": 0,
+      "age_max": 3,
+      "frequences_sur_20_repas": {
+        "entrees_grasses_max": 1,
+        "fritures_max": 2,
+        "poisson_min": 4,
+        "viande_non_hachee_min": 4,
+        "legumes_cuits_min": 20,
+        "desserts_sucres_max": 1,
+        "fruits_min": 19
+      },
+      "grammages_proteines": {
+        "8_12_mois": 10,
+        "12_18_mois": 20,
+        "18mois_3ans": 30
+      }
+    },
+    "maternelle": {
+      "label": "Maternelle (3-6 ans)",
+      "age_min": 3,
+      "age_max": 6,
+      "frequences_sur_20_repas": {
+        "crudites_min": 10,
+        "entrees_grasses_max": 4,
+        "fritures_max": 4,
+        "ratio_pl_faible_max": 2,
+        "poisson_qualite_min": 4,
+        "viande_non_hachee_min": 4,
+        "plats_industriels_max": 3,
+        "legumes_min": 10,
+        "feculents_min": 10,
+        "fromages_calcium_min": 8,
+        "laitages_sains_min": 6,
+        "desserts_gras_max": 3,
+        "desserts_sucres_max": 4,
+        "fruits_crus_min": 8
+      },
+      "grammages": {
+        "proteines_g": 50,
+        "feculents_cuits_g": 120
+      }
+    },
+    "elementaire": {
+      "label": "Élémentaire (6-11 ans)",
+      "age_min": 6,
+      "age_max": 11,
+      "frequences_sur_20_repas": {
+        "crudites_min": 10,
+        "entrees_grasses_max": 4,
+        "fritures_max": 4,
+        "ratio_pl_faible_max": 2,
+        "poisson_qualite_min": 4,
+        "viande_non_hachee_min": 4,
+        "plats_industriels_max": 3,
+        "legumes_min": 10,
+        "feculents_min": 10,
+        "fromages_calcium_min": 8,
+        "laitages_sains_min": 6,
+        "desserts_gras_max": 3,
+        "desserts_sucres_max": 4,
+        "fruits_crus_min": 8
+      },
+      "grammages": {
+        "proteines_g": 70,
+        "feculents_cuits_g": 170
+      }
+    },
+    "adolescents": {
+      "label": "Adolescents (11-18 ans)",
+      "age_min": 11,
+      "age_max": 18,
+      "frequences_sur_20_repas": {
+        "crudites_min": 10,
+        "entrees_grasses_max": 4,
+        "fritures_max": 4,
+        "ratio_pl_faible_max": 2,
+        "poisson_qualite_min": 4,
+        "viande_non_hachee_min": 4,
+        "plats_industriels_max": 3,
+        "legumes_min": 10,
+        "feculents_min": 10,
+        "fromages_calcium_min": 8,
+        "laitages_sains_min": 6,
+        "desserts_gras_max": 3,
+        "desserts_sucres_max": 4,
+        "fruits_crus_min": 8
+      },
+      "grammages": {
+        "proteines_g": 110,
+        "feculents_cuits_g": 225
+      }
+    }
+  },
+  "egalim": {
+    "repas_vegetariens_min_par_semaine": 1,
+    "produits_durables_min_pct": 50,
+    "produits_bio_min_pct": 20
+  }
+}

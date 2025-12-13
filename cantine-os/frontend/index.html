@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantine.OS - Moteur de Conformité</title>
+    <meta name="description"
+        content="Optimisez vos menus de restauration collective avec l'IA. Conformité Egalim, GEMRCN, Budget et Carbone.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">🍽️</span>
+                    <span class="logo-text">Cantine<span class="logo-accent">.OS</span></span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-view="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span>Tableau de bord</span>
+                </a>
+                <a href="#" class="nav-item" data-view="generator">
+                    <span class="nav-icon">🤖</span>
+                    <span>Générateur IA</span>
+                </a>
+                <a href="#" class="nav-item" data-view="ocr">
+                    <span class="nav-icon">📷</span>
+                    <span>Scanner Menu (OCR)</span>
+                </a>
+                <a href="#" class="nav-item" data-view="heatmap">
+                    <span class="nav-icon">🔥</span>
+                    <span>Heatmap Valeur</span>
+                </a>
+                <a href="#" class="nav-item" data-view="planning">
+                    <span class="nav-icon">📅</span>
+                    <span>Planning</span>
+                </a>
+                <a href="#" class="nav-item" data-view="recipes">
+                    <span class="nav-icon">📖</span>
+                    <span>Base Recettes</span>
+                </a>
+                <a href="#" class="nav-item" data-view="suppliers">
+                    <span class="nav-icon">🏪</span>
+                    <span>Fournisseurs</span>
+                </a>
+                <a href="#" class="nav-item" data-view="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Configuration</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="compliance-badge">
+                    <span class="badge-icon">✅</span>
+                    <span>Egalim 2024</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard View -->
+            <section id="view-dashboard" class="view active">
+                <header class="view-header">
+                    <div>
+                        <h1>Tableau de Bord</h1>
+                        <p class="subtitle">Vue d'ensemble de votre conformité alimentaire</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn-primary" onclick="showView('generator')">
+                            <span>🤖</span> Générer un Menu
+                        </button>
+                    </div>
+                </header>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon green">🌱</div>
+                        <div class="stat-content">
+                            <span class="stat-value">20%</span>
+                            <span class="stat-label">Repas Végétariens</span>
+                        </div>
+                        <div class="stat-trend positive">↑ Egalim OK</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon blue">💰</div>
+                        <div class="stat-content">
+                            <span class="stat-value">1.85€</span>
+                            <span class="stat-label">Coût Moyen / Repas</span>
+                        </div>
+                        <div class="stat-trend positive">↓ -8% vs budget</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon yellow">🌍</div>
+                        <div class="stat-content">
+                            <span class="stat-value">1.2kg</span>
+                            <span class="stat-label">CO₂ Moyen / Repas</span>
+                        </div>
+                        <div class="stat-trend positive">↓ -15% objectif</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple">📍</div>
+                        <div class="stat-content">
+                            <span class="stat-value">65%</span>
+                            <span class="stat-label">Produits Locaux</span>
+                        </div>
+                        <div class="stat-trend positive">↑ +12%</div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Conformité GEMRCN</h3>
+                            <span class="badge success">100%</span>
+                        </div>
+                        <div class="progress-list">
+                            <div class="progress-item">
+                                <span>Crudités (≥10/20)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                                <span class="progress-value">12/20</span>
+                            </div>
+                            <div class="progress-item">
+                                <span>Poisson qualité (≥4/20)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                                <span class="progress-value">5/20</span>
+                            </div>
+                            <div class="progress-item">
+                                <span>Fritures (≤4/20)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill warning" style="width: 75%"></div>
+                                </div>
+                                <span class="progress-value">3/20</span>
+                            </div>
+                            <div class="progress-item">
+                                <span>Fruits crus (≥8/20)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                                <span class="progress-value">10/20</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Menu de la Semaine</h3>
+                            <a href="#" onclick="showView('generator'); return false;">Modifier →</a>
+                        </div>
+                        <div class="week-preview" id="week-preview">
+                            <!-- Filled by JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Generator View -->
+            <section id="view-generator" class="view">
+                <header class="view-header">
+                    <div>
+                        <h1>🤖 Générateur de Menus IA</h1>
+                        <p class="subtitle">Laissez l'algorithme optimiser vos menus</p>
+                    </div>
+                </header>
+
+                <div class="generator-layout">
+                    <div class="config-panel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>⚙️ Configuration</h3>
+                            </div>
+                            <form id="generator-form">
+                                <div class="form-group">
+                                    <label>Nom de l'établissement</label>
+                                    <input type="text" id="input-nom" value="École Primaire Jean Moulin" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>💰 Budget Maximum par Repas (€)</label>
+                                    <div class="range-input">
+                                        <input type="range" id="input-budget" min="1.5" max="3" step="0.1" value="2.0">
+                                        <span class="range-value" id="budget-value">2.00€</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>📅 Nombre de Jours</label>
+                                    <select id="input-jours">
+                                        <option value="5">5 jours (1 semaine)</option>
+                                        <option value="10">10 jours (2 semaines)</option>
+                                        <option value="20" selected>20 jours (1 mois)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>👶 Profil des Convives</label>
+                                    <div class="convive-selector">
+                                        <div class="convive-option">
+                                            <input type="checkbox" id="convive-maternelle" checked>
+                                            <label for="convive-maternelle">Maternelle (3-6 ans)</label>
+                                            <input type="number" id="effectif-maternelle" value="50" min="0">
+                                        </div>
+                                        <div class="convive-option">
+                                            <input type="checkbox" id="convive-elementaire" checked>
+                                            <label for="convive-elementaire">Élémentaire (6-11 ans)</label>
+                                            <input type="number" id="effectif-elementaire" value="150" min="0">
+                                        </div>
+                                        <div class="convive-option">
+                                            <input type="checkbox" id="convive-ado">
+                                            <label for="convive-ado">Adolescents (11-18 ans)</label>
+                                            <input type="number" id="effectif-ado" value="0" min="0">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>🎯 Priorités d'Optimisation</label>
+                                    <div class="priority-sliders">
+                                        <div class="priority-item">
+                                            <span>💰 Budget</span>
+                                            <input type="range" id="prio-budget" min="0" max="100" value="40">
+                                        </div>
+                                        <div class="priority-item">
+                                            <span>🌍 Carbone</span>
+                                            <input type="range" id="prio-carbone" min="0" max="100" value="30">
+                                        </div>
+                                        <div class="priority-item">
+                                            <span>📍 Local</span>
+                                            <input type="range" id="prio-local" min="0" max="100" value="30">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    <span class="btn-icon">✨</span>
+                                    Générer le Menu Optimisé
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="result-panel">
+                        <div class="card" id="result-card">
+                            <div class="empty-state">
+                                <div class="empty-icon">🍽️</div>
+                                <h3>Prêt à générer</h3>
+                                <p>Configurez vos paramètres et lancez le générateur IA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OCR Scanner View -->
+            <section id="view-ocr" class="view">
+                <header class="view-header">
+                    <div>
+                        <h1>📷 Scanner de Menu (OCR)</h1>
+                        <p class="subtitle">Extrayez automatiquement le contenu d'un menu depuis une image ou un PDF</p>
+                    </div>
+                </header>
+
+                <div class="ocr-layout">
+                    <div class="upload-panel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>📤 Importer un Menu</h3>
+                                <span class="badge" id="ocr-model-badge">olmOCR-7B</span>
+                            </div>
+                            <div class="upload-zone" id="ocr-dropzone">
+                                <div class="dropzone-content">
+                                    <div class="dropzone-icon">📄</div>
+                                    <h4>Glissez-déposez votre fichier ici</h4>
+                                    <p>ou cliquez pour sélectionner</p>
+                                    <div class="dropzone-formats">
+                                        Formats acceptés: PDF, PNG, JPG, JPEG
+                                    </div>
+                                    <input type="file" id="ocr-file-input" accept=".pdf,.png,.jpg,.jpeg,.webp" hidden>
+                                </div>
+                            </div>
+                            <div class="upload-actions">
+                                <button class="btn btn-primary btn-block" id="ocr-scan-btn" disabled>
+                                    <span class="btn-icon">🔍</span>
+                                    Lancer l'extraction OCR
+                                </button>
+                            </div>
+                            <div class="selected-file" id="selected-file-info" style="display: none;">
+                                <span class="file-icon">📎</span>
+                                <span class="file-name" id="selected-file-name"></span>
+                                <button class="btn-remove" onclick="clearOCRFile()">✕</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ocr-result-panel">
+                        <div class="card" id="ocr-result-card">
+                            <div class="empty-state">
+                                <div class="empty-icon">🔬</div>
+                                <h3>En attente d'un fichier</h3>
+                                <p>Le modèle <strong>olmOCR-7B</strong> (HuggingFace) analysera votre menu et extraira
+                                    automatiquement les plats, prix et informations nutritionnelles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Heatmap View -->
+            <section id="view-heatmap" class="view">
+                <header class="view-header">
+                    <div>
+                        <h1>🔥 Heatmap Densité Nutritionnelle vs Coût</h1>
+                        <p class="subtitle">Prouvez aux décideurs que la qualité ne coûte pas plus cher</p>
+                    </div>
+                </header>
+
+                <div class="heatmap-container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Valeur Nutritionnelle par Euro Dépensé</h3>
+                            <div class="legend">
+                                <span class="legend-item"><span class="dot green"></span> Excellent rapport</span>
+                                <span class="legend-item"><span class="dot yellow"></span> Bon rapport</span>
+                                <span class="legend-item"><span class="dot red"></span> Faible rapport</span>
+                            </div>
+                        </div>
+                        <div class="heatmap-grid" id="heatmap-grid">
+                            <!-- Filled by JS -->
+                        </div>
+                    </div>
+
+                    <div class="card insight-card">
+                        <div class="card-header">
+                            <h3>💡 Insight Clé</h3>
+                        </div>
+                        <div class="insight-content">
+                            <div class="insight-highlight">
+                                <span class="highlight-value">2.4x</span>
+                                <span class="highlight-label">Les lentilles offrent 2.4x plus de nutriments par euro que
+                                    le poulet</span>
+                            </div>
+                            <p class="insight-description">
+                                Cette analyse démontre que les protéines végétales (légumineuses) sont non seulement
+                                conformes à la loi Egalim mais également plus économiques et plus denses
+                                nutritionnellement
+                                que les alternatives carnées.
+                            </p>
+                            <div class="insight-cta">
+                                <button class="btn btn-outline" onclick="exportHeatmapPDF()">
+                                    📄 Exporter pour présentation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Planning View -->
+            <section id="view-planning" class="view">
+                <header class="view-header">
+                    <div>
+                        <h1>📅 Planning des Menus</h1>
+                        <p class="subtitle" id="planning-week-label">Semaine 50 • 9 - 13 Décembre 2024</p>
+                    </div>
+                    <div class="header-actions">
+                        <div class="week-navigation">
+                            <button class="btn btn-icon" onclick="navigateWeek(-1)" title="Semaine précédente">
+                                <span>◀</span>
+                            </button>
+                            <button class="btn btn-outline" onclick="goToCurrentWeek()">
+                                <span>📍</span> Aujourd'hui
+                            </button>
+                            <button class="btn btn-icon" onclick="navigateWeek(1)" title="Semaine suivante">
+                                <span>▶</span>
+                            </button>
+                        </div>
+                        <button class="btn btn-primary" onclick="autoFillPlanning()">
+                            <span>🤖</span> Remplir avec IA
+                        </button>
+                    </div>
+                </header>
+
+                <div class="planning-layout">
+                    <div class="planning-calendar">
+                        <div class="planning-grid" id="planning-grid">
+                            <!-- Header row -->
+                            <div class="planning-header-row">
+                                <div class="planning-type-label"></div>
+                                <div class="planning-day-header" data-day="0">Lundi<br><span class="date-small"
+                                        id="date-0"></span></div>
+                                <div class="planning-day-header" data-day="1">Mardi<br><span class="date-small"
+                                        id="date-1"></span></div>
+                                <div class="planning-day-header" data-day="2">Mercredi<br><span class="date-small"
+                                        id="date-2"></span></div>
+                                <div class="planning-day-header" data-day="3">Jeudi<br><span class="date-small"
+                                        id="date-3"></span></div>
+                                <div class="planning-day-header" data-day="4">Vendredi<br><span class="date-small"
+                                        id="date-4"></span></div>
+                            </div>
+
+                            <!-- Entrée row -->
+                            <div class="planning-row" data-type="entree">
+                                <div class="planning-type-label">🥗 Entrée</div>
+                                <div class="planning-slot" data-day="0" data-type="entree"
+                                    onclick="openRecipeSelector(0, 'entree')"></div>
+                                <div class="planning-slot" data-day="1" data-type="entree"
+                                    onclick="openRecipeSelector(1, 'entree')"></div>
+                                <div class="planning-slot" data-day="2" data-type="entree"
+                                    onclick="openRecipeSelector(2, 'entree')"></div>
+                                <div class="planning-slot" data-day="3" data-type="entree"
+                                    onclick="openRecipeSelector(3, 'entree')"></div>
+                                <div class="planning-slot" data-day="4" data-type="entree"
+                                    onclick="openRecipeSelector(4, 'entree')"></div>
+                            </div>
+
+                            <!-- Plat principal row -->
+                            <div class="planning-row" data-type="plat_principal">
+                                <div class="planning-type-label">🍖 Plat Principal</div>
+                                <div class="planning-slot" data-day="0" data-type="plat_principal"
+                                    onclick="openRecipeSelector(0, 'plat_principal')"></div>
+                                <div class="planning-slot" data-day="1" data-type="plat_principal"
+                                    onclick="openRecipeSelector(1, 'plat_principal')"></div>
+                                <div class="planning-slot" data-day="2" data-type="plat_principal"
+                                    onclick="openRecipeSelector(2, 'plat_principal')"></div>
+                                <div class="planning-slot" data-day="3" data-type="plat_principal"
+                                    onclick="openRecipeSelector(3, 'plat_principal')"></div>
+                                <div class="planning-slot" data-day="4" data-type="plat_principal"
+                                    onclick="openRecipeSelector(4, 'plat_principal')"></div>
+                            </div>
+
+                            <!-- Garniture row -->
+                            <div class="planning-row" data-type="garniture">
+                                <div class="planning-type-label">🥔 Garniture</div>
+                                <div class="planning-slot" data-day="0" data-type="garniture"
+                                    onclick="openRecipeSelector(0, 'garniture')"></div>
+                                <div class="planning-slot" data-day="1" data-type="garniture"
+                                    onclick="openRecipeSelector(1, 'garniture')"></div>
+                                <div class="planning-slot" data-day="2" data-type="garniture"
+                                    onclick="openRecipeSelector(2, 'garniture')"></div>
+                                <div class="planning-slot" data-day="3" data-type="garniture"
+                                    onclick="openRecipeSelector(3, 'garniture')"></div>
+                                <div class="planning-slot" data-day="4" data-type="garniture"
+                                    onclick="openRecipeSelector(4, 'garniture')"></div>
+                            </div>
+
+                            <!-- Dessert row -->
+                            <div class="planning-row" data-type="dessert">
+                                <div class="planning-type-label">🍨 Dessert</div>
+                                <div class="planning-slot" data-day="0" data-type="dessert"
+                                    onclick="openRecipeSelector(0, 'dessert')"></div>
+                                <div class="planning-slot" data-day="1" data-type="dessert"
+                                    onclick="openRecipeSelector(1, 'dessert')"></div>
+                                <div class="planning-slot" data-day="2" data-type="dessert"
+                                    onclick="openRecipeSelector(2, 'dessert')"></div>
+                                <div class="planning-slot" data-day="3" data-type="dessert"
+                                    onclick="openRecipeSelector(3, 'dessert')"></div>
+                                <div class="planning-slot" data-day="4" data-type="dessert"
+                                    onclick="openRecipeSelector(4, 'dessert')"></div>
+                            </div>
+
+                            <!-- Produit laitier row -->
+                            <div class="planning-row" data-type="produit_laitier">
+                                <div class="planning-type-label">🧀 Laitage</div>
+                                <div class="planning-slot" data-day="0" data-type="produit_laitier"
+                                    onclick="openRecipeSelector(0, 'produit_laitier')"></div>
+                                <div class="planning-slot" data-day="1" data-type="produit_laitier"
+                                    onclick="openRecipeSelector(1, 'produit_laitier')"></div>
+                                <div class="planning-slot" data-day="2" data-type="produit_laitier"
+                                    onclick="openRecipeSelector(2, 'produit_laitier')"></div>
+                                <div class="planning-slot" data-day="3" data-type="produit_laitier"
+                                    onclick="openRecipeSelector(3, 'produit_laitier')"></div>
+                                <div class="planning-slot" data-day="4" data-type="produit_laitier"
+                                    onclick="openRecipeSelector(4, 'produit_laitier')"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar de conformité -->
+                    <div class="planning-sidebar">
+                        <div class="card compliance-card">
+                            <div class="card-header">
+                                <h3>📊 Synthèse Semaine</h3>
+                            </div>
+                            <div class="compliance-stats" id="planning-compliance-stats">
+                                <div class="compliance-item">
+                                    <span class="compliance-label">🌱 Repas Végétariens</span>
+                                    <div class="compliance-bar">
+                                        <div class="compliance-fill" id="compliance-veg" style="width: 0%"></div>
+                                    </div>
+                                    <span class="compliance-value" id="compliance-veg-value">0/1</span>
+                                </div>
+                                <div class="compliance-item">
+                                    <span class="compliance-label">🌿 Produits Bio</span>
+                                    <div class="compliance-bar">
+                                        <div class="compliance-fill" id="compliance-bio" style="width: 0%"></div>
+                                    </div>
+                                    <span class="compliance-value" id="compliance-bio-value">0%</span>
+                                </div>
+                                <div class="compliance-item">
+                                    <span class="compliance-label">📍 Produits Locaux</span>
+                                    <div class="compliance-bar">
+                                        <div class="compliance-fill" id="compliance-local" style="width: 0%"></div>
+                                    </div>
+                                    <span class="compliance-value" id="compliance-local-value">0%</span>
+                                </div>
+                                <div class="compliance-divider"></div>
+                                <div class="compliance-item large">
+                                    <span class="compliance-label">💰 Coût Moyen / Jour</span>
+                                    <span class="compliance-value large" id="compliance-cost-value">0.00€</span>
+                                </div>
+                                <div class="compliance-item large">
+                                    <span class="compliance-label">🌍 CO₂ Moyen / Jour</span>
+                                    <span class="compliance-value large" id="compliance-co2-value">0.00kg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="planning-actions">
+                            <button class="btn btn-outline btn-block" onclick="clearPlanning()">
+                                <span>🗑️</span> Vider la semaine
+                            </button>
+                            <button class="btn btn-outline btn-block" onclick="duplicatePreviousWeek()">
+                                <span>📋</span> Copier semaine précédente
+                            </button>
+                            <button class="btn btn-outline btn-block" onclick="exportPlanningPDF()">
+                                <span>📄</span> Exporter PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recipe Selector Modal for Planning -->
+            <div class="modal" id="recipe-selector-modal">
+                <div class="modal-content modal-large">
+                    <div class="modal-header">
+                        <h3 id="recipe-selector-title">Sélectionner une recette</h3>
+                        <button class="modal-close" onclick="closeRecipeSelector()">&times;</button>
+                    </div>
+                    <div class="recipe-selector-filters">
+                        <input type="search" placeholder="Rechercher..." id="recipe-selector-search"
+                            oninput="filterRecipeSelector()">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="selector-filter-veg" onchange="filterRecipeSelector()"> 🌱
+                            Végétarien
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="selector-filter-bio" onchange="filterRecipeSelector()"> 🌿 Bio
+                        </label>
+                    </div>
+                    <div class="recipe-selector-grid" id="recipe-selector-grid">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipes View -->
+            <section id="view-recipes" class="view">
+                <header class="view-header">
+                    <div>
+                        <h1>📖 Base de Recettes</h1>
+                        <p class="subtitle">Gérez votre catalogue de recettes</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn-outline">
+                            <span>📤</span> Importer CSV
+                        </button>
+                        <button class="btn btn-primary">
+                            <span>➕</span> Nouvelle Recette
+                        </button>
+                    </div>
+                </header>
+
+                <div class="filters-bar">
+                    <input type="search" placeholder="Rechercher une recette..." class="search-input"
+                        id="recipe-search">
+                    <select id="filter-type">
+                        <option value="">Tous les types</option>
+                        <option value="entree">Entrées</option>
+                        <option value="plat_principal">Plats principaux</option>
+                        <option value="garniture">Garnitures</option>
+                        <option value="dessert">Desserts</option>
+                        <option value="produit_laitier">Produits laitiers</option>
+                    </select>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="filter-veg"> 🌱 Végétarien
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="filter-bio"> 🌿 Bio
+                    </label>
+                </div>
+
+                <div class="recipes-grid" id="recipes-grid">
+                    <!-- Filled by JS -->
+                </div>
+            </section>
+
+            <!-- Suppliers View -->
+            <section id="view-suppliers" class="view">
+                <header class="view-header">
+                    <div>
+                        <h1>🏪 Fournisseurs</h1>
+                        <p class="subtitle">Gérez votre réseau de fournisseurs et leur catalogue de produits</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn-primary" onclick="openSupplierModal()">
+                            <span>➕</span> Ajouter un Fournisseur
+                        </button>
+                    </div>
+                </header>
+
+                <div class="suppliers-stats" id="suppliers-stats">
+                    <!-- Filled by JS -->
+                </div>
+
+                <div class="suppliers-grid" id="suppliers-grid">
+                    <!-- Filled by JS -->
+                </div>
+            </section>
+
+            <!-- Supplier Modal -->
+            <div class="modal" id="supplier-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="supplier-modal-title">Ajouter un Fournisseur</h3>
+                        <button class="modal-close" onclick="closeSupplierModal()">&times;</button>
+                    </div>
+                    <form id="supplier-form" onsubmit="saveSupplier(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nom du fournisseur *</label>
+                                <input type="text" id="supplier-nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Type</label>
+                                <select id="supplier-type">
+                                    <option value="producteur">Producteur</option>
+                                    <option value="grossiste">Grossiste</option>
+                                    <option value="cooperative">Coopérative</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="supplier-email">
+                            </div>
+                            <div class="form-group">
+                                <label>Téléphone</label>
+                                <input type="tel" id="supplier-telephone">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Ville</label>
+                                <input type="text" id="supplier-ville">
+                            </div>
+                            <div class="form-group">
+                                <label>Distance (km)</label>
+                                <input type="number" id="supplier-distance" min="0" step="1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Labels (séparés par virgule)</label>
+                            <input type="text" id="supplier-labels" placeholder="bio, local, HVE...">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Délai livraison (jours)</label>
+                                <input type="number" id="supplier-delai" min="1" value="1">
+                            </div>
+                            <div class="form-group">
+                                <label>Minimum commande (€)</label>
+                                <input type="number" id="supplier-minimum" min="0" step="10" value="0">
+                            </div>
+                        </div>
+                        <input type="hidden" id="supplier-id">
+                        <div class="modal-actions">
+                            <button type="button" class="btn btn-outline"
+                                onclick="closeSupplierModal()">Annuler</button>
+                            <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Product Detail Modal -->
+            <div class="modal" id="product-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="product-modal-title">Catalogue Produits</h3>
+                        <button class="modal-close" onclick="closeProductModal()">&times;</button>
+                    </div>
+                    <div class="product-list" id="product-list">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings View -->
+            <section id="view-settings" class="view">
+                <header class="view-header">
+                    <div>
+                        <h1>⚙️ Configuration</h1>
+                        <p class="subtitle">Paramètres de votre établissement</p>
+                    </div>
+                </header>
+
+                <div class="settings-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>🏫 Établissement</h3>
+                        </div>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label>Nom</label>
+                                <input type="text" value="École Primaire Jean Moulin">
+                            </div>
+                            <div class="form-group">
+                                <label>Type</label>
+                                <select>
+                                    <option>École Maternelle</option>
+                                    <option selected>École Élémentaire</option>
+                                    <option>Collège</option>
+                                    <option>Lycée</option>
+                                    <option>Hôpital</option>
+                                    <option>EHPAD</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Nombre de couverts/jour</label>
+                                <input type="number" value="200">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>📊 Objectifs Réglementaires</h3>
+                        </div>
+                        <div class="objectives-list">
+                            <div class="objective-item">
+                                <div class="objective-info">
+                                    <span class="objective-name">Loi Egalim - Repas Végétariens</span>
+                                    <span class="objective-value">≥1 par semaine</span>
+                                </div>
+                                <span class="status-badge success">Activé</span>
+                            </div>
+                            <div class="objective-item">
+                                <div class="objective-info">
+                                    <span class="objective-name">Produits Bio</span>
+                                    <span class="objective-value">≥20%</span>
+                                </div>
+                                <span class="status-badge success">Activé</span>
+                            </div>
+                            <div class="objective-item">
+                                <div class="objective-info">
+                                    <span class="objective-name">Produits Durables</span>
+                                    <span class="objective-value">≥50%</span>
+                                </div>
+                                <span class="status-badge success">Activé</span>
+                            </div>
+                            <div class="objective-item future">
+                                <div class="objective-info">
+                                    <span class="objective-name">Transition Protéique 2050</span>
+                                    <span class="objective-value">60% protéines végétales</span>
+                                </div>
+                                <span class="status-badge warning">Bêta</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

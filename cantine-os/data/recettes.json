@@ -1,0 +1,1175 @@
+[
+    {
+        "id": "r001",
+        "nom": "Lentilles corail au curry",
+        "type": "plat_principal",
+        "vegetarien": true,
+        "bio": true,
+        "local": false,
+        "ingredients": [
+            {
+                "nom": "lentilles_corail",
+                "quantite_kg": 0.08,
+                "cout_euro_kg": 4.50
+            },
+            {
+                "nom": "lait_coco",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 3.20
+            },
+            {
+                "nom": "curry",
+                "quantite_kg": 0.005,
+                "cout_euro_kg": 25.00
+            },
+            {
+                "nom": "oignon",
+                "quantite_kg": 0.02,
+                "cout_euro_kg": 1.50
+            }
+        ],
+        "cout_portion_euro": 0.55,
+        "nutrition_par_portion": {
+            "proteines_g": 12,
+            "lipides_g": 8,
+            "glucides_g": 25,
+            "fer_mg": 3.5,
+            "calcium_mg": 40,
+            "fibres_g": 8
+        },
+        "co2_kg_portion": 0.35,
+        "tags": [
+            "legumineuses",
+            "sans_gluten"
+        ]
+    },
+    {
+        "id": "r002",
+        "nom": "Poulet rôti aux herbes",
+        "type": "plat_principal",
+        "vegetarien": false,
+        "bio": false,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "poulet",
+                "quantite_kg": 0.12,
+                "cout_euro_kg": 8.50
+            },
+            {
+                "nom": "herbes_provence",
+                "quantite_kg": 0.002,
+                "cout_euro_kg": 30.00
+            },
+            {
+                "nom": "huile_olive",
+                "quantite_kg": 0.01,
+                "cout_euro_kg": 8.00
+            }
+        ],
+        "cout_portion_euro": 1.15,
+        "nutrition_par_portion": {
+            "proteines_g": 28,
+            "lipides_g": 12,
+            "glucides_g": 0,
+            "fer_mg": 1.2,
+            "calcium_mg": 15,
+            "fibres_g": 0
+        },
+        "co2_kg_portion": 2.80,
+        "tags": [
+            "viande",
+            "sans_gluten"
+        ]
+    },
+    {
+        "id": "r003",
+        "nom": "Gratin de courgettes aux lentilles",
+        "type": "plat_principal",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "courgettes",
+                "quantite_kg": 0.15,
+                "cout_euro_kg": 2.50
+            },
+            {
+                "nom": "lentilles_vertes",
+                "quantite_kg": 0.06,
+                "cout_euro_kg": 3.80
+            },
+            {
+                "nom": "fromage_rape",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 12.00
+            },
+            {
+                "nom": "creme_fraiche",
+                "quantite_kg": 0.02,
+                "cout_euro_kg": 5.00
+            }
+        ],
+        "cout_portion_euro": 0.82,
+        "nutrition_par_portion": {
+            "proteines_g": 14,
+            "lipides_g": 10,
+            "glucides_g": 18,
+            "fer_mg": 4.0,
+            "calcium_mg": 120,
+            "fibres_g": 6
+        },
+        "co2_kg_portion": 0.55,
+        "tags": [
+            "legumineuses",
+            "legumes"
+        ]
+    },
+    {
+        "id": "r004",
+        "nom": "Filet de cabillaud sauce citron",
+        "type": "plat_principal",
+        "vegetarien": false,
+        "bio": false,
+        "local": false,
+        "ingredients": [
+            {
+                "nom": "cabillaud",
+                "quantite_kg": 0.10,
+                "cout_euro_kg": 15.00
+            },
+            {
+                "nom": "citron",
+                "quantite_kg": 0.02,
+                "cout_euro_kg": 3.00
+            },
+            {
+                "nom": "beurre",
+                "quantite_kg": 0.015,
+                "cout_euro_kg": 10.00
+            }
+        ],
+        "cout_portion_euro": 1.72,
+        "nutrition_par_portion": {
+            "proteines_g": 22,
+            "lipides_g": 8,
+            "glucides_g": 1,
+            "fer_mg": 0.5,
+            "calcium_mg": 20,
+            "fibres_g": 0
+        },
+        "co2_kg_portion": 1.80,
+        "tags": [
+            "poisson",
+            "qualite"
+        ]
+    },
+    {
+        "id": "r005",
+        "nom": "Omelette aux fines herbes",
+        "type": "plat_principal",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "oeufs",
+                "quantite_kg": 0.12,
+                "cout_euro_kg": 4.50
+            },
+            {
+                "nom": "ciboulette",
+                "quantite_kg": 0.005,
+                "cout_euro_kg": 20.00
+            },
+            {
+                "nom": "persil",
+                "quantite_kg": 0.005,
+                "cout_euro_kg": 15.00
+            }
+        ],
+        "cout_portion_euro": 0.72,
+        "nutrition_par_portion": {
+            "proteines_g": 14,
+            "lipides_g": 11,
+            "glucides_g": 1,
+            "fer_mg": 2.0,
+            "calcium_mg": 55,
+            "fibres_g": 0
+        },
+        "co2_kg_portion": 0.95,
+        "tags": [
+            "oeufs",
+            "sans_gluten"
+        ]
+    },
+    {
+        "id": "r006",
+        "nom": "Carottes râpées vinaigrette",
+        "type": "entree",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "carottes",
+                "quantite_kg": 0.10,
+                "cout_euro_kg": 1.80
+            },
+            {
+                "nom": "huile_colza",
+                "quantite_kg": 0.01,
+                "cout_euro_kg": 4.50
+            },
+            {
+                "nom": "vinaigre",
+                "quantite_kg": 0.005,
+                "cout_euro_kg": 2.00
+            }
+        ],
+        "cout_portion_euro": 0.22,
+        "nutrition_par_portion": {
+            "proteines_g": 1,
+            "lipides_g": 5,
+            "glucides_g": 8,
+            "fer_mg": 0.4,
+            "calcium_mg": 35,
+            "fibres_g": 3
+        },
+        "co2_kg_portion": 0.15,
+        "tags": [
+            "crudites",
+            "legumes"
+        ]
+    },
+    {
+        "id": "r007",
+        "nom": "Salade de tomates mozzarella",
+        "type": "entree",
+        "vegetarien": true,
+        "bio": false,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "tomates",
+                "quantite_kg": 0.12,
+                "cout_euro_kg": 3.50
+            },
+            {
+                "nom": "mozzarella",
+                "quantite_kg": 0.04,
+                "cout_euro_kg": 9.00
+            },
+            {
+                "nom": "basilic",
+                "quantite_kg": 0.002,
+                "cout_euro_kg": 40.00
+            }
+        ],
+        "cout_portion_euro": 0.86,
+        "nutrition_par_portion": {
+            "proteines_g": 8,
+            "lipides_g": 9,
+            "glucides_g": 5,
+            "fer_mg": 0.6,
+            "calcium_mg": 180,
+            "fibres_g": 1.5
+        },
+        "co2_kg_portion": 0.65,
+        "tags": [
+            "crudites",
+            "calcium"
+        ]
+    },
+    {
+        "id": "r008",
+        "nom": "Purée de pommes de terre",
+        "type": "garniture",
+        "vegetarien": true,
+        "bio": false,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "pommes_de_terre",
+                "quantite_kg": 0.15,
+                "cout_euro_kg": 1.20
+            },
+            {
+                "nom": "lait",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 1.10
+            },
+            {
+                "nom": "beurre",
+                "quantite_kg": 0.015,
+                "cout_euro_kg": 10.00
+            }
+        ],
+        "cout_portion_euro": 0.38,
+        "nutrition_par_portion": {
+            "proteines_g": 4,
+            "lipides_g": 6,
+            "glucides_g": 28,
+            "fer_mg": 1.0,
+            "calcium_mg": 45,
+            "fibres_g": 2
+        },
+        "co2_kg_portion": 0.25,
+        "tags": [
+            "feculents"
+        ]
+    },
+    {
+        "id": "r009",
+        "nom": "Haricots verts persillés",
+        "type": "garniture",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "haricots_verts",
+                "quantite_kg": 0.12,
+                "cout_euro_kg": 4.00
+            },
+            {
+                "nom": "persil",
+                "quantite_kg": 0.005,
+                "cout_euro_kg": 15.00
+            },
+            {
+                "nom": "beurre",
+                "quantite_kg": 0.01,
+                "cout_euro_kg": 10.00
+            }
+        ],
+        "cout_portion_euro": 0.66,
+        "nutrition_par_portion": {
+            "proteines_g": 2.5,
+            "lipides_g": 4,
+            "glucides_g": 6,
+            "fer_mg": 1.5,
+            "calcium_mg": 50,
+            "fibres_g": 4
+        },
+        "co2_kg_portion": 0.30,
+        "tags": [
+            "legumes"
+        ]
+    },
+    {
+        "id": "r010",
+        "nom": "Compote de pommes",
+        "type": "dessert",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "pommes",
+                "quantite_kg": 0.15,
+                "cout_euro_kg": 2.50
+            }
+        ],
+        "cout_portion_euro": 0.38,
+        "nutrition_par_portion": {
+            "proteines_g": 0.5,
+            "lipides_g": 0.3,
+            "glucides_g": 15,
+            "fer_mg": 0.3,
+            "calcium_mg": 8,
+            "fibres_g": 2
+        },
+        "co2_kg_portion": 0.12,
+        "tags": [
+            "fruits",
+            "sans_sucre_ajoute"
+        ]
+    },
+    {
+        "id": "r011",
+        "nom": "Yaourt nature",
+        "type": "produit_laitier",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "yaourt",
+                "quantite_kg": 0.125,
+                "cout_euro_kg": 2.80
+            }
+        ],
+        "cout_portion_euro": 0.35,
+        "nutrition_par_portion": {
+            "proteines_g": 5,
+            "lipides_g": 3.5,
+            "glucides_g": 6,
+            "fer_mg": 0.1,
+            "calcium_mg": 150,
+            "fibres_g": 0
+        },
+        "co2_kg_portion": 0.45,
+        "tags": [
+            "laitages",
+            "calcium"
+        ]
+    },
+    {
+        "id": "r012",
+        "nom": "Fromage Comté",
+        "type": "produit_laitier",
+        "vegetarien": true,
+        "bio": false,
+        "local": false,
+        "ingredients": [
+            {
+                "nom": "comte",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 22.00
+            }
+        ],
+        "cout_portion_euro": 0.66,
+        "nutrition_par_portion": {
+            "proteines_g": 8,
+            "lipides_g": 10,
+            "glucides_g": 0.5,
+            "fer_mg": 0.2,
+            "calcium_mg": 285,
+            "fibres_g": 0
+        },
+        "co2_kg_portion": 0.55,
+        "tags": [
+            "fromage",
+            "calcium_eleve"
+        ]
+    },
+    {
+        "id": "r013",
+        "nom": "Betteraves en salade",
+        "type": "entree",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "betteraves",
+                "quantite_kg": 0.10,
+                "cout_euro_kg": 2.00
+            },
+            {
+                "nom": "huile_noix",
+                "quantite_kg": 0.01,
+                "cout_euro_kg": 18.00
+            },
+            {
+                "nom": "vinaigre_cidre",
+                "quantite_kg": 0.005,
+                "cout_euro_kg": 4.00
+            }
+        ],
+        "cout_portion_euro": 0.40,
+        "nutrition_par_portion": {
+            "proteines_g": 2,
+            "lipides_g": 5,
+            "glucides_g": 10,
+            "fer_mg": 0.8,
+            "calcium_mg": 25,
+            "fibres_g": 2.5
+        },
+        "co2_kg_portion": 0.18,
+        "tags": [
+            "crudites",
+            "legumes"
+        ]
+    },
+    {
+        "id": "r014",
+        "nom": "Concombre à la crème",
+        "type": "entree",
+        "vegetarien": true,
+        "bio": false,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "concombre",
+                "quantite_kg": 0.12,
+                "cout_euro_kg": 1.50
+            },
+            {
+                "nom": "creme_fraiche",
+                "quantite_kg": 0.02,
+                "cout_euro_kg": 5.00
+            },
+            {
+                "nom": "ciboulette",
+                "quantite_kg": 0.003,
+                "cout_euro_kg": 20.00
+            }
+        ],
+        "cout_portion_euro": 0.34,
+        "nutrition_par_portion": {
+            "proteines_g": 1.5,
+            "lipides_g": 4,
+            "glucides_g": 3,
+            "fer_mg": 0.3,
+            "calcium_mg": 20,
+            "fibres_g": 1
+        },
+        "co2_kg_portion": 0.12,
+        "tags": [
+            "crudites",
+            "legumes"
+        ]
+    },
+    {
+        "id": "r015",
+        "nom": "Taboulé aux légumes",
+        "type": "entree",
+        "vegetarien": true,
+        "bio": true,
+        "local": false,
+        "ingredients": [
+            {
+                "nom": "semoule",
+                "quantite_kg": 0.06,
+                "cout_euro_kg": 2.50
+            },
+            {
+                "nom": "tomates",
+                "quantite_kg": 0.05,
+                "cout_euro_kg": 3.50
+            },
+            {
+                "nom": "concombre",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 1.50
+            },
+            {
+                "nom": "menthe",
+                "quantite_kg": 0.003,
+                "cout_euro_kg": 35.00
+            },
+            {
+                "nom": "huile_olive",
+                "quantite_kg": 0.01,
+                "cout_euro_kg": 8.00
+            }
+        ],
+        "cout_portion_euro": 0.52,
+        "nutrition_par_portion": {
+            "proteines_g": 3,
+            "lipides_g": 6,
+            "glucides_g": 18,
+            "fer_mg": 1.2,
+            "calcium_mg": 30,
+            "fibres_g": 2
+        },
+        "co2_kg_portion": 0.28,
+        "tags": [
+            "feculents",
+            "crudites"
+        ]
+    },
+    {
+        "id": "r016",
+        "nom": "Saumon grillé",
+        "type": "plat_principal",
+        "vegetarien": false,
+        "bio": false,
+        "local": false,
+        "ingredients": [
+            {
+                "nom": "saumon",
+                "quantite_kg": 0.10,
+                "cout_euro_kg": 18.00
+            },
+            {
+                "nom": "huile_olive",
+                "quantite_kg": 0.005,
+                "cout_euro_kg": 8.00
+            },
+            {
+                "nom": "citron",
+                "quantite_kg": 0.02,
+                "cout_euro_kg": 3.00
+            }
+        ],
+        "cout_portion_euro": 1.90,
+        "nutrition_par_portion": {
+            "proteines_g": 25,
+            "lipides_g": 15,
+            "glucides_g": 0,
+            "fer_mg": 0.8,
+            "calcium_mg": 15,
+            "fibres_g": 0
+        },
+        "co2_kg_portion": 2.50,
+        "tags": [
+            "poisson",
+            "qualite",
+            "omega3"
+        ]
+    },
+    {
+        "id": "r017",
+        "nom": "Boeuf bourguignon",
+        "type": "plat_principal",
+        "vegetarien": false,
+        "bio": false,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "boeuf",
+                "quantite_kg": 0.12,
+                "cout_euro_kg": 16.00
+            },
+            {
+                "nom": "carottes",
+                "quantite_kg": 0.04,
+                "cout_euro_kg": 1.80
+            },
+            {
+                "nom": "oignon",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 1.50
+            },
+            {
+                "nom": "champignons",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 6.00
+            }
+        ],
+        "cout_portion_euro": 2.25,
+        "nutrition_par_portion": {
+            "proteines_g": 30,
+            "lipides_g": 14,
+            "glucides_g": 6,
+            "fer_mg": 3.5,
+            "calcium_mg": 25,
+            "fibres_g": 2
+        },
+        "co2_kg_portion": 6.50,
+        "tags": [
+            "viande",
+            "viande_non_hachee"
+        ]
+    },
+    {
+        "id": "r018",
+        "nom": "Tofu sauté aux légumes",
+        "type": "plat_principal",
+        "vegetarien": true,
+        "bio": true,
+        "local": false,
+        "ingredients": [
+            {
+                "nom": "tofu",
+                "quantite_kg": 0.12,
+                "cout_euro_kg": 8.00
+            },
+            {
+                "nom": "poivrons",
+                "quantite_kg": 0.06,
+                "cout_euro_kg": 4.00
+            },
+            {
+                "nom": "sauce_soja",
+                "quantite_kg": 0.01,
+                "cout_euro_kg": 6.00
+            },
+            {
+                "nom": "gingembre",
+                "quantite_kg": 0.005,
+                "cout_euro_kg": 12.00
+            }
+        ],
+        "cout_portion_euro": 1.32,
+        "nutrition_par_portion": {
+            "proteines_g": 18,
+            "lipides_g": 9,
+            "glucides_g": 8,
+            "fer_mg": 3.0,
+            "calcium_mg": 180,
+            "fibres_g": 3
+        },
+        "co2_kg_portion": 0.45,
+        "tags": [
+            "legumineuses",
+            "legumes",
+            "sans_gluten"
+        ]
+    },
+    {
+        "id": "r019",
+        "nom": "Pâtes à la bolognaise végétale",
+        "type": "plat_principal",
+        "vegetarien": true,
+        "bio": true,
+        "local": false,
+        "ingredients": [
+            {
+                "nom": "pates",
+                "quantite_kg": 0.08,
+                "cout_euro_kg": 2.00
+            },
+            {
+                "nom": "proteine_soja",
+                "quantite_kg": 0.04,
+                "cout_euro_kg": 6.00
+            },
+            {
+                "nom": "sauce_tomate",
+                "quantite_kg": 0.08,
+                "cout_euro_kg": 2.50
+            },
+            {
+                "nom": "oignon",
+                "quantite_kg": 0.02,
+                "cout_euro_kg": 1.50
+            }
+        ],
+        "cout_portion_euro": 0.63,
+        "nutrition_par_portion": {
+            "proteines_g": 16,
+            "lipides_g": 4,
+            "glucides_g": 45,
+            "fer_mg": 4.5,
+            "calcium_mg": 60,
+            "fibres_g": 6
+        },
+        "co2_kg_portion": 0.40,
+        "tags": [
+            "feculents",
+            "legumineuses"
+        ]
+    },
+    {
+        "id": "r020",
+        "nom": "Quiche lorraine",
+        "type": "plat_principal",
+        "vegetarien": false,
+        "bio": false,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "pate_brisee",
+                "quantite_kg": 0.06,
+                "cout_euro_kg": 4.50
+            },
+            {
+                "nom": "lardons",
+                "quantite_kg": 0.04,
+                "cout_euro_kg": 12.00
+            },
+            {
+                "nom": "oeufs",
+                "quantite_kg": 0.06,
+                "cout_euro_kg": 4.50
+            },
+            {
+                "nom": "creme_fraiche",
+                "quantite_kg": 0.04,
+                "cout_euro_kg": 5.00
+            }
+        ],
+        "cout_portion_euro": 1.15,
+        "nutrition_par_portion": {
+            "proteines_g": 12,
+            "lipides_g": 22,
+            "glucides_g": 18,
+            "fer_mg": 1.5,
+            "calcium_mg": 85,
+            "fibres_g": 1
+        },
+        "co2_kg_portion": 1.80,
+        "tags": [
+            "oeufs",
+            "viande"
+        ]
+    },
+    {
+        "id": "r021",
+        "nom": "Riz pilaf",
+        "type": "garniture",
+        "vegetarien": true,
+        "bio": false,
+        "local": false,
+        "ingredients": [
+            {
+                "nom": "riz",
+                "quantite_kg": 0.08,
+                "cout_euro_kg": 2.20
+            },
+            {
+                "nom": "oignon",
+                "quantite_kg": 0.02,
+                "cout_euro_kg": 1.50
+            },
+            {
+                "nom": "huile_olive",
+                "quantite_kg": 0.008,
+                "cout_euro_kg": 8.00
+            }
+        ],
+        "cout_portion_euro": 0.27,
+        "nutrition_par_portion": {
+            "proteines_g": 3,
+            "lipides_g": 4,
+            "glucides_g": 35,
+            "fer_mg": 0.8,
+            "calcium_mg": 15,
+            "fibres_g": 1
+        },
+        "co2_kg_portion": 0.22,
+        "tags": [
+            "feculents"
+        ]
+    },
+    {
+        "id": "r022",
+        "nom": "Épinards à la crème",
+        "type": "garniture",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "epinards",
+                "quantite_kg": 0.15,
+                "cout_euro_kg": 4.50
+            },
+            {
+                "nom": "creme_fraiche",
+                "quantite_kg": 0.02,
+                "cout_euro_kg": 5.00
+            },
+            {
+                "nom": "beurre",
+                "quantite_kg": 0.008,
+                "cout_euro_kg": 10.00
+            }
+        ],
+        "cout_portion_euro": 0.86,
+        "nutrition_par_portion": {
+            "proteines_g": 4,
+            "lipides_g": 6,
+            "glucides_g": 4,
+            "fer_mg": 3.5,
+            "calcium_mg": 150,
+            "fibres_g": 3
+        },
+        "co2_kg_portion": 0.25,
+        "tags": [
+            "legumes",
+            "fer_eleve"
+        ]
+    },
+    {
+        "id": "r023",
+        "nom": "Ratatouille provençale",
+        "type": "garniture",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "courgettes",
+                "quantite_kg": 0.05,
+                "cout_euro_kg": 2.50
+            },
+            {
+                "nom": "aubergines",
+                "quantite_kg": 0.05,
+                "cout_euro_kg": 3.00
+            },
+            {
+                "nom": "tomates",
+                "quantite_kg": 0.05,
+                "cout_euro_kg": 3.50
+            },
+            {
+                "nom": "poivrons",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 4.00
+            },
+            {
+                "nom": "huile_olive",
+                "quantite_kg": 0.01,
+                "cout_euro_kg": 8.00
+            }
+        ],
+        "cout_portion_euro": 0.58,
+        "nutrition_par_portion": {
+            "proteines_g": 2,
+            "lipides_g": 5,
+            "glucides_g": 8,
+            "fer_mg": 1.0,
+            "calcium_mg": 30,
+            "fibres_g": 4
+        },
+        "co2_kg_portion": 0.20,
+        "tags": [
+            "legumes"
+        ]
+    },
+    {
+        "id": "r024",
+        "nom": "Mousse au chocolat",
+        "type": "dessert",
+        "vegetarien": true,
+        "bio": false,
+        "local": false,
+        "ingredients": [
+            {
+                "nom": "chocolat_noir",
+                "quantite_kg": 0.04,
+                "cout_euro_kg": 12.00
+            },
+            {
+                "nom": "oeufs",
+                "quantite_kg": 0.06,
+                "cout_euro_kg": 4.50
+            },
+            {
+                "nom": "sucre",
+                "quantite_kg": 0.015,
+                "cout_euro_kg": 1.20
+            }
+        ],
+        "cout_portion_euro": 0.77,
+        "nutrition_par_portion": {
+            "proteines_g": 6,
+            "lipides_g": 14,
+            "glucides_g": 22,
+            "fer_mg": 2.5,
+            "calcium_mg": 35,
+            "fibres_g": 2
+        },
+        "co2_kg_portion": 0.85,
+        "tags": [
+            "desserts_gras"
+        ]
+    },
+    {
+        "id": "r025",
+        "nom": "Crème caramel",
+        "type": "dessert",
+        "vegetarien": true,
+        "bio": false,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "lait",
+                "quantite_kg": 0.10,
+                "cout_euro_kg": 1.10
+            },
+            {
+                "nom": "oeufs",
+                "quantite_kg": 0.05,
+                "cout_euro_kg": 4.50
+            },
+            {
+                "nom": "sucre",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 1.20
+            }
+        ],
+        "cout_portion_euro": 0.37,
+        "nutrition_par_portion": {
+            "proteines_g": 6,
+            "lipides_g": 5,
+            "glucides_g": 20,
+            "fer_mg": 0.8,
+            "calcium_mg": 120,
+            "fibres_g": 0
+        },
+        "co2_kg_portion": 0.55,
+        "tags": [
+            "laitages",
+            "desserts_sucres"
+        ]
+    },
+    {
+        "id": "r026",
+        "nom": "Salade de fruits frais",
+        "type": "dessert",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "pommes",
+                "quantite_kg": 0.05,
+                "cout_euro_kg": 2.50
+            },
+            {
+                "nom": "poires",
+                "quantite_kg": 0.05,
+                "cout_euro_kg": 3.00
+            },
+            {
+                "nom": "oranges",
+                "quantite_kg": 0.05,
+                "cout_euro_kg": 2.20
+            },
+            {
+                "nom": "banane",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 1.80
+            }
+        ],
+        "cout_portion_euro": 0.44,
+        "nutrition_par_portion": {
+            "proteines_g": 1,
+            "lipides_g": 0.3,
+            "glucides_g": 18,
+            "fer_mg": 0.5,
+            "calcium_mg": 25,
+            "fibres_g": 3
+        },
+        "co2_kg_portion": 0.15,
+        "tags": [
+            "fruits",
+            "sans_sucre_ajoute"
+        ]
+    },
+    {
+        "id": "r027",
+        "nom": "Gâteau au yaourt",
+        "type": "dessert",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "yaourt",
+                "quantite_kg": 0.125,
+                "cout_euro_kg": 2.80
+            },
+            {
+                "nom": "farine",
+                "quantite_kg": 0.04,
+                "cout_euro_kg": 1.50
+            },
+            {
+                "nom": "sucre",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 1.20
+            },
+            {
+                "nom": "oeufs",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 4.50
+            }
+        ],
+        "cout_portion_euro": 0.57,
+        "nutrition_par_portion": {
+            "proteines_g": 5,
+            "lipides_g": 8,
+            "glucides_g": 35,
+            "fer_mg": 0.6,
+            "calcium_mg": 80,
+            "fibres_g": 1
+        },
+        "co2_kg_portion": 0.48,
+        "tags": [
+            "desserts_sucres",
+            "laitages"
+        ]
+    },
+    {
+        "id": "r028",
+        "nom": "Fromage blanc aux fruits",
+        "type": "produit_laitier",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "fromage_blanc",
+                "quantite_kg": 0.10,
+                "cout_euro_kg": 3.50
+            },
+            {
+                "nom": "fraises",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 8.00
+            }
+        ],
+        "cout_portion_euro": 0.59,
+        "nutrition_par_portion": {
+            "proteines_g": 8,
+            "lipides_g": 4,
+            "glucides_g": 8,
+            "fer_mg": 0.3,
+            "calcium_mg": 120,
+            "fibres_g": 1
+        },
+        "co2_kg_portion": 0.40,
+        "tags": [
+            "laitages",
+            "calcium",
+            "fruits"
+        ]
+    },
+    {
+        "id": "r029",
+        "nom": "Camembert",
+        "type": "produit_laitier",
+        "vegetarien": true,
+        "bio": false,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "camembert",
+                "quantite_kg": 0.03,
+                "cout_euro_kg": 18.00
+            }
+        ],
+        "cout_portion_euro": 0.54,
+        "nutrition_par_portion": {
+            "proteines_g": 6,
+            "lipides_g": 8,
+            "glucides_g": 0.5,
+            "fer_mg": 0.3,
+            "calcium_mg": 180,
+            "fibres_g": 0
+        },
+        "co2_kg_portion": 0.52,
+        "tags": [
+            "fromage",
+            "calcium_eleve"
+        ]
+    },
+    {
+        "id": "r030",
+        "nom": "Petits suisses",
+        "type": "produit_laitier",
+        "vegetarien": true,
+        "bio": true,
+        "local": true,
+        "ingredients": [
+            {
+                "nom": "petits_suisses",
+                "quantite_kg": 0.06,
+                "cout_euro_kg": 5.00
+            }
+        ],
+        "cout_portion_euro": 0.30,
+        "nutrition_par_portion": {
+            "proteines_g": 4,
+            "lipides_g": 3,
+            "glucides_g": 4,
+            "fer_mg": 0.1,
+            "calcium_mg": 100,
+            "fibres_g": 0
+        },
+        "co2_kg_portion": 0.35,
+        "tags": [
+            "laitages",
+            "calcium"
+        ]
+    }
+]
