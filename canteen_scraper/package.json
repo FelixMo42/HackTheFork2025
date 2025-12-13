@@ -1,0 +1,19 @@
+{
+  "name": "canteen-scraper",
+  "version": "1.0.0",
+  "description": "Web scraper for French canteen data from ma-cantine.agriculture.gouv.fr",
+  "main": "scraper.js",
+  "scripts": {
+    "start": "node scraper.js"
+  },
+  "keywords": [
+    "scraper",
+    "puppeteer",
+    "web-scraping"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.6.1"
+  }
+}
