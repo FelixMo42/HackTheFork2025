@@ -1,0 +1,122 @@
+{
+    "Saint-Maurice": {
+        "lat": 48.816,
+        "lng": 2.474
+    },
+    "Carcassone": {
+        "lat": 43.213,
+        "lng": 2.352
+    },
+    "Misson": {
+        "lat": 43.587,
+        "lng": -0.960
+    },
+    "Bobigny": {
+        "lat": 48.909,
+        "lng": 2.435
+    },
+    "Salles-de-Barbezieux": {
+        "lat": 45.446,
+        "lng": -0.129
+    },
+    "Isigny-sur-Mer": {
+        "lat": 49.317,
+        "lng": -1.108
+    },
+    "Antibes": {
+        "lat": 43.580,
+        "lng": 7.125
+    },
+    "Grasse": {
+        "lat": 43.660,
+        "lng": 6.926
+    },
+    "Gif-sur-Yvette": {
+        "lat": 48.702,
+        "lng": 2.134
+    },
+    "Saint-Martin-en-Haut": {
+        "lat": 45.655,
+        "lng": 4.561
+    },
+    "Bondy": {
+        "lat": 48.902,
+        "lng": 2.482
+    },
+    "Mulhouse": {
+        "lat": 47.750,
+        "lng": 7.335
+    },
+    "Nice": {
+        "lat": 43.710,
+        "lng": 7.262
+    },
+    "Blois": {
+        "lat": 47.587,
+        "lng": 1.335
+    },
+    "Saint-Yrieix-sur-Charente": {
+        "lat": 45.673,
+        "lng": 0.122
+    },
+    "Caen": {
+        "lat": 49.182,
+        "lng": -0.370
+    },
+    "Libourne": {
+        "lat": 44.914,
+        "lng": -0.244
+    },
+    "Quimper": {
+        "lat": 47.997,
+        "lng": -4.097
+    },
+    "Bourges": {
+        "lat": 47.081,
+        "lng": 2.398
+    },
+    "Bourg-en-Bresse": {
+        "lat": 46.205,
+        "lng": 5.225
+    },
+    "Borgo": {
+        "lat": 42.555,
+        "lng": 9.426
+    },
+    "Lyon": {
+        "lat": 45.764,
+        "lng": 4.835
+    },
+    "Agen": {
+        "lat": 44.203,
+        "lng": 0.616
+    },
+    "Angoulême": {
+        "lat": 45.648,
+        "lng": 0.156
+    },
+    "Briançon": {
+        "lat": 44.899,
+        "lng": 6.643
+    },
+    "Arles": {
+        "lat": 43.676,
+        "lng": 4.628
+    },
+    "Montpellier": {
+        "lat": 43.610,
+        "lng": 3.876
+    },
+    "Tarnos": {
+        "lat": 43.541,
+        "lng": -1.460
+    },
+    "Orléans": {
+        "lat": 47.902,
+        "lng": 1.909
+    },
+    "Châteauroux": {
+        "lat": 46.810,
+        "lng": 1.691
+    }
+}

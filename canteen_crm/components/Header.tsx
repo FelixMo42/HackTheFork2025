@@ -1,11 +1,15 @@
+"use client"
 
 import { Bell, Search } from 'lucide-react'
+import { useSearchParams } from 'next/navigation'
 
 export function Header() {
+    const searchParams = useSearchParams()
+
     return (
         <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
             <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
-                <form className="relative flex flex-1" action="#" method="GET">
+                <form className="relative flex flex-1" action="" method="GET">
                     <label htmlFor="search-field" className="sr-only">
                         Rechercher
                     </label>
@@ -19,6 +23,7 @@ export function Header() {
                             placeholder="Rechercher des municipalités..."
                             type="search"
                             name="search"
+                            defaultValue={searchParams.get('search')?.toString()}
                         />
                     </div>
                 </form>
