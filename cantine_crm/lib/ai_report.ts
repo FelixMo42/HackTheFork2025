@@ -1,7 +1,7 @@
 import { spawn } from 'child_process';
 import { db } from '@/lib/db';
 
-export async function generateCanteenReport(canteenName: string, city: string, id: number): Promise<string> {
+export async function generateCanteenReport(canteenName: string, city: string, id: number, url?: string): Promise<string> {
     try {
         // 1. Check if report already exists in DB
         const canteen = await db.getById(id);
@@ -11,10 +11,12 @@ export async function generateCanteenReport(canteenName: string, city: string, i
         }
 
         // 2. If not, generate it
+        const urlContext = url ? `Utilise cette URL pour trouver des informations spécifiques : ${url}` : '';
         const prompt = `Agis comme un expert en restauration collective durable. Analyse la cantine "${canteenName}" située à "${city}".
+        ${urlContext}
         Génère un rapport structuré en français (Markdown) contenant :
         1. Une synthèse générale sur l'établissement.
-        2. Les points forts (basé sur le nom, la localisation, etc.).
+        2. Les points forts (basé sur le nom, la localisation, et les données trouvées).
         3. 3 Recommandations stratégiques courtes pour améliorer la durabilité (bio, végétarien, zéro plastique).
         
         Sois concis, professionnel et encourageant.`;

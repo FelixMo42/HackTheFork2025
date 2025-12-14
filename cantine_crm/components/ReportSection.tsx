@@ -5,11 +5,12 @@ interface ReportSectionProps {
     canteenName: string;
     city: string;
     id: number;
+    url?: string;
 }
 
-export async function ReportSection({ canteenName, city, id }: ReportSectionProps) {
+export async function ReportSection({ canteenName, city, id, url }: ReportSectionProps) {
     // This fetch might be slow (if not cached), so this component will suspend
-    const report = await generateCanteenReport(canteenName, city, id);
+    const report = await generateCanteenReport(canteenName, city, id, url);
 
     return (
         <div className="bg-gradient-to-br from-gray-900 to-gray-800 shadow-xl ring-1 ring-white/10 sm:rounded-xl p-6 text-white h-full">

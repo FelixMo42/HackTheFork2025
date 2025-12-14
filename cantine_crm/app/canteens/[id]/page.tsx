@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 import { ReportSection } from '@/components/ReportSection';
 import { ReportSkeleton } from '@/components/ReportSkeleton';
+import { NotificationTracker } from '@/components/NotificationTracker';
 
 export default async function CanteenPage(props: { params: Promise<{ id: string }> }) {
     const params = await props.params;
@@ -77,7 +78,8 @@ export default async function CanteenPage(props: { params: Promise<{ id: string 
 
                 {/* AI Report Section - Streamed */}
                 <Suspense fallback={<ReportSkeleton />}>
-                    <ReportSection canteenName={canteen.name} city={canteen.city} id={canteen.id} />
+                    <NotificationTracker canteenName={canteen.name} canteenId={canteen.id} />
+                    <ReportSection canteenName={canteen.name} city={canteen.city} id={canteen.id} url={canteen.url} />
                 </Suspense>
             </div>
         </div>

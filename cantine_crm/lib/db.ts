@@ -27,6 +27,7 @@ export interface Canteen {
     // Helper for map if coordinates ever come back
     coordinates?: { lat: number; lng: number };
     aiReport?: string;
+    url?: string;
 }
 
 export const db = {
