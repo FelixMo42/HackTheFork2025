@@ -8,8 +8,8 @@ Since 2019, under France's Egalim Law, canteens require 1 vegetarian dish per we
 
 ## Cantine OS
 
-We present to you Canteen.OS: A software that will 
-This is a Monthly Subscription service for canteen managers to recieve a biweekly (or monthly) menu with recipes that is compliant to the latest regulations whilst offering more plant-based options.
+We present to you Canteen.OS: A software that harnesses information about the newest regulations alongside the powers of AI technology to generate cost-effective menus for your canteen. 
+This is a monthly subscription service at only 25€/month for canteen managers to recieve a weekly menu with recipes that is compliant to the latest regulations whilst offering more plant-based options.
 
 ## Cantine CRM
 
