@@ -1,0 +1,291 @@
+{
+    "dechets_par_recette": {
+        "r001": [],
+        "r002": [
+            {
+                "nom": "os_poulet",
+                "quantite_kg": 0.03,
+                "type": "reste",
+                "label": "Os de poulet"
+            }
+        ],
+        "r003": [
+            {
+                "nom": "epluchures_courgettes",
+                "quantite_kg": 0.02,
+                "type": "epluchure",
+                "label": "Épluchures de courgettes"
+            }
+        ],
+        "r004": [
+            {
+                "nom": "aretes_poisson",
+                "quantite_kg": 0.02,
+                "type": "reste",
+                "label": "Arêtes de poisson"
+            },
+            {
+                "nom": "zestes_citron",
+                "quantite_kg": 0.005,
+                "type": "zeste",
+                "label": "Zestes de citron"
+            }
+        ],
+        "r005": [
+            {
+                "nom": "coquilles_oeufs",
+                "quantite_kg": 0.015,
+                "type": "coque",
+                "label": "Coquilles d'œufs"
+            }
+        ],
+        "r006": [
+            {
+                "nom": "fanes_carottes",
+                "quantite_kg": 0.02,
+                "type": "fane",
+                "label": "Fanes de carottes"
+            },
+            {
+                "nom": "epluchures_carottes",
+                "quantite_kg": 0.015,
+                "type": "epluchure",
+                "label": "Épluchures de carottes"
+            }
+        ],
+        "r007": [],
+        "r008": [
+            {
+                "nom": "epluchures_pdt",
+                "quantite_kg": 0.03,
+                "type": "epluchure",
+                "label": "Épluchures de pommes de terre"
+            }
+        ],
+        "r009": [
+            {
+                "nom": "bouts_haricots",
+                "quantite_kg": 0.01,
+                "type": "reste",
+                "label": "Bouts de haricots verts"
+            }
+        ],
+        "r010": [
+            {
+                "nom": "pelures_pommes",
+                "quantite_kg": 0.025,
+                "type": "epluchure",
+                "label": "Pelures de pommes"
+            },
+            {
+                "nom": "trogons_pommes",
+                "quantite_kg": 0.02,
+                "type": "reste",
+                "label": "Trognons de pommes"
+            }
+        ],
+        "r011": [],
+        "r012": [],
+        "r013": [
+            {
+                "nom": "fanes_betteraves",
+                "quantite_kg": 0.015,
+                "type": "fane",
+                "label": "Fanes de betteraves"
+            }
+        ],
+        "r014": [
+            {
+                "nom": "epluchures_concombre",
+                "quantite_kg": 0.01,
+                "type": "epluchure",
+                "label": "Épluchures de concombre"
+            }
+        ],
+        "r015": [],
+        "r016": [
+            {
+                "nom": "peau_saumon",
+                "quantite_kg": 0.015,
+                "type": "reste",
+                "label": "Peau de saumon"
+            }
+        ],
+        "r017": [
+            {
+                "nom": "os_boeuf",
+                "quantite_kg": 0.025,
+                "type": "reste",
+                "label": "Os de bœuf"
+            },
+            {
+                "nom": "epluchures_carottes",
+                "quantite_kg": 0.008,
+                "type": "epluchure",
+                "label": "Épluchures de carottes"
+            },
+            {
+                "nom": "epluchures_oignon",
+                "quantite_kg": 0.005,
+                "type": "epluchure",
+                "label": "Épluchures d'oignon"
+            }
+        ],
+        "r018": [],
+        "r019": [
+            {
+                "nom": "epluchures_oignon",
+                "quantite_kg": 0.004,
+                "type": "epluchure",
+                "label": "Épluchures d'oignon"
+            }
+        ],
+        "r020": [
+            {
+                "nom": "coquilles_oeufs",
+                "quantite_kg": 0.01,
+                "type": "coque",
+                "label": "Coquilles d'œufs"
+            }
+        ],
+        "r021": [
+            {
+                "nom": "epluchures_oignon",
+                "quantite_kg": 0.004,
+                "type": "epluchure",
+                "label": "Épluchures d'oignon"
+            }
+        ],
+        "r022": [
+            {
+                "nom": "tiges_epinards",
+                "quantite_kg": 0.02,
+                "type": "reste",
+                "label": "Tiges d'épinards"
+            }
+        ]
+    },
+    "recettes_valorisation": [
+        {
+            "id": "rv001",
+            "nom": "Bouillon de légumes maison",
+            "type": "base",
+            "utilise_dechets": [
+                "epluchures_carottes",
+                "epluchures_pdt",
+                "epluchures_oignon",
+                "fanes_carottes",
+                "bouts_haricots",
+                "tiges_epinards"
+            ],
+            "description": "Bouillon nutritif à partir des épluchures et restes de légumes",
+            "economie_kg": 0.5,
+            "co2_evite": 0.15
+        },
+        {
+            "id": "rv002",
+            "nom": "Chips de légumes",
+            "type": "accompagnement",
+            "utilise_dechets": [
+                "epluchures_pdt",
+                "epluchures_carottes",
+                "epluchures_courgettes"
+            ],
+            "description": "Chips croustillantes à partir des épluchures",
+            "economie_kg": 0.3,
+            "co2_evite": 0.08
+        },
+        {
+            "id": "rv003",
+            "nom": "Pesto de fanes",
+            "type": "sauce",
+            "utilise_dechets": [
+                "fanes_carottes",
+                "fanes_betteraves"
+            ],
+            "description": "Pesto original avec fanes fraîches",
+            "economie_kg": 0.2,
+            "co2_evite": 0.05
+        },
+        {
+            "id": "rv004",
+            "nom": "Fond de volaille",
+            "type": "base",
+            "utilise_dechets": [
+                "os_poulet"
+            ],
+            "description": "Fond savoureux pour sauces et potages",
+            "economie_kg": 0.4,
+            "co2_evite": 0.2
+        },
+        {
+            "id": "rv005",
+            "nom": "Gelée de pommes",
+            "type": "dessert",
+            "utilise_dechets": [
+                "pelures_pommes",
+                "trogons_pommes"
+            ],
+            "description": "Gelée naturelle sans sucre ajouté",
+            "economie_kg": 0.25,
+            "co2_evite": 0.06
+        },
+        {
+            "id": "rv006",
+            "nom": "Compost valorisé",
+            "type": "autre",
+            "utilise_dechets": [
+                "coquilles_oeufs",
+                "epluchures_concombre"
+            ],
+            "description": "Enrichissement du sol pour le potager",
+            "economie_kg": 0.5,
+            "co2_evite": 0.1
+        },
+        {
+            "id": "rv007",
+            "nom": "Zestes confits",
+            "type": "condiment",
+            "utilise_dechets": [
+                "zestes_citron"
+            ],
+            "description": "Zestes confits pour pâtisserie",
+            "economie_kg": 0.05,
+            "co2_evite": 0.02
+        },
+        {
+            "id": "rv008",
+            "nom": "Fumet de poisson",
+            "type": "base",
+            "utilise_dechets": [
+                "aretes_poisson",
+                "peau_saumon"
+            ],
+            "description": "Fumet riche pour sauces et soupes",
+            "economie_kg": 0.3,
+            "co2_evite": 0.15
+        }
+    ],
+    "types_dechets": {
+        "epluchure": {
+            "emoji": "🥕",
+            "label": "Épluchures"
+        },
+        "fane": {
+            "emoji": "🌿",
+            "label": "Fanes"
+        },
+        "reste": {
+            "emoji": "🦴",
+            "label": "Restes"
+        },
+        "coque": {
+            "emoji": "🥚",
+            "label": "Coques"
+        },
+        "zeste": {
+            "emoji": "🍋",
+            "label": "Zestes"
+        }
+    }
+}

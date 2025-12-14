@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évaluez votre repas 🥕 - Cantine.OS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .menu-date {
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            color: #667eea;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .menu-info {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .menu-info h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .menu-item {
+            padding: 8px 0;
+            color: #555;
+            font-size: 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item strong {
+            color: #667eea;
+            display: inline-block;
+            width: 120px;
+        }
+
+        .rating-section {
+            margin: 40px 0;
+        }
+
+        .rating-label {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .carrot-rating {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .carrot {
+            font-size: 60px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+            opacity: 0.3;
+            transform: scale(1);
+        }
+
+        .carrot:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .carrot.selected {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.15);
+            animation: bounce 0.5s ease;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: scale(1.15); }
+            50% { transform: scale(1.3); }
+        }
+
+        .rating-text {
+            font-size: 18px;
+            color: #667eea;
+            font-weight: 600;
+            min-height: 30px;
+            margin-top: 10px;
+        }
+
+        .comment-section {
+            margin: 30px 0;
+        }
+
+        .comment-label {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 100px;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: scaleIn 0.5s ease;
+        }
+
+        @keyframes scaleIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .success-title {
+            font-size: 28px;
+            color: #10b981;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .success-text {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .stats-item {
+            font-size: 16px;
+            color: #667eea;
+            margin: 5px 0;
+        }
+
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .carrot {
+                font-size: 50px;
+            }
+
+            .carrot-rating {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🥕</div>
+        <h1>Évaluez votre repas</h1>
+        <p class="subtitle">Votre avis compte pour améliorer nos menus !</p>
+
+        <div class="error-message" id="error-message"></div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 15px; color: #666;">Chargement...</p>
+        </div>
+
+        <div id="rating-form">
+            <div class="menu-date" id="menu-date">Menu du jour</div>
+
+            <div class="menu-info" id="menu-info" style="display: none;">
+                <h3>🍽️ Au menu aujourd'hui</h3>
+                <div id="menu-items"></div>
+            </div>
+
+            <div class="rating-section">
+                <div class="rating-label">Comment avez-vous trouvé ce repas ?</div>
+                <div class="carrot-rating" id="carrot-rating">
+                    <span class="carrot" data-rating="1" title="Pas bon">🥕</span>
+                    <span class="carrot" data-rating="2" title="Moyen">🥕</span>
+                    <span class="carrot" data-rating="3" title="Bon">🥕</span>
+                    <span class="carrot" data-rating="4" title="Très bon">🥕</span>
+                    <span class="carrot" data-rating="5" title="Excellent">🥕</span>
+                </div>
+                <div class="rating-text" id="rating-text"></div>
+            </div>
+
+            <div class="comment-section">
+                <div class="comment-label">💬 Un commentaire ? (optionnel)</div>
+                <textarea id="comment" placeholder="Dites-nous ce que vous avez aimé ou ce qui pourrait être amélioré..."></textarea>
+            </div>
+
+            <button class="submit-btn" id="submit-btn" disabled>
+                Envoyer mon avis
+            </button>
+        </div>
+
+        <div class="success-message" id="success-message">
+            <div class="success-icon">✨</div>
+            <div class="success-title">Merci pour votre avis !</div>
+            <div class="success-text">Votre évaluation a bien été enregistrée.</div>
+            <div class="stats" id="stats"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:8000/api';
+        let selectedRating = 0;
+        let menuDate = '';
+
+        const ratingTexts = {
+            1: "😞 Pas terrible",
+            2: "😐 Moyen",
+            3: "🙂 Bon",
+            4: "😊 Très bon",
+            5: "🤩 Excellent !"
+        };
+
+        // Get menu date from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        menuDate = urlParams.get('date') || new Date().toISOString().split('T')[0];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMenuInfo();
+            setupRatingSystem();
+        });
+
+        async function loadMenuInfo() {
+            const menuDateEl = document.getElementById('menu-date');
+            const loadingEl = document.getElementById('loading');
+            
+            // Format date for display
+            const dateObj = new Date(menuDate + 'T12:00:00');
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = dateObj.toLocaleDateString('fr-FR', options);
+            menuDateEl.textContent = `Menu du ${formattedDate}`;
+
+            // Try to load menu details from planning
+            try {
+                loadingEl.classList.add('show');
+                const response = await fetch(`${API_URL}/planning`);
+                if (response.ok) {
+                    const planning = await response.json();
+                    displayMenuFromPlanning(planning, menuDate);
+                }
+            } catch (error) {
+                console.log('Could not load menu details:', error);
+            } finally {
+                loadingEl.classList.remove('show');
+            }
+        }
+
+        function displayMenuFromPlanning(planning, date) {
+            // Find the menu for this date in planning
+            // Planning structure: { weekKey: { day: { type: recipeId } } }
+            let menuFound = false;
+            
+            for (const weekKey in planning) {
+                const weekData = planning[weekKey];
+                for (const day in weekData) {
+                    const dayData = weekData[day];
+                    if (dayData.date === date) {
+                        // Found the menu for this date
+                        const menuInfoEl = document.getElementById('menu-info');
+                        const menuItemsEl = document.getElementById('menu-items');
+                        
+                        let menuHTML = '';
+                        const types = {
+                            'entree': '🥗 Entrée',
+                            'plat_principal': '🍽️ Plat principal',
+                            'garniture': '🥔 Garniture',
+                            'dessert': '🍰 Dessert',
+                            'produit_laitier': '🧀 Produit laitier'
+                        };
+
+                        for (const [type, label] of Object.entries(types)) {
+                            if (dayData[type]) {
+                                menuHTML += `<div class="menu-item"><strong>${label}:</strong> ${dayData[type]}</div>`;
+                            }
+                        }
+
+                        if (menuHTML) {
+                            menuItemsEl.innerHTML = menuHTML;
+                            menuInfoEl.style.display = 'block';
+                            menuFound = true;
+                        }
+                        break;
+                    }
+                }
+                if (menuFound) break;
+            }
+        }
+
+        function setupRatingSystem() {
+            const carrots = document.querySelectorAll('.carrot');
+            const ratingText = document.getElementById('rating-text');
+            const submitBtn = document.getElementById('submit-btn');
+
+            carrots.forEach(carrot => {
+                carrot.addEventListener('click', () => {
+                    const rating = parseInt(carrot.dataset.rating);
+                    selectedRating = rating;
+
+                    // Update visual state
+                    carrots.forEach((c, index) => {
+                        if (index < rating) {
+                            c.classList.add('selected');
+                        } else {
+                            c.classList.remove('selected');
+                        }
+                    });
+
+                    // Update text
+                    ratingText.textContent = ratingTexts[rating];
+
+                    // Enable submit button
+                    submitBtn.disabled = false;
+                });
+
+                // Hover effect
+                carrot.addEventListener('mouseenter', () => {
+                    if (selectedRating === 0) {
+                        const rating = parseInt(carrot.dataset.rating);
+                        ratingText.textContent = ratingTexts[rating];
+                    }
+                });
+
+                carrot.addEventListener('mouseleave', () => {
+                    if (selectedRating === 0) {
+                        ratingText.textContent = '';
+                    } else {
+                        ratingText.textContent = ratingTexts[selectedRating];
+                    }
+                });
+            });
+
+            submitBtn.addEventListener('click', submitRating);
+        }
+
+        async function submitRating() {
+            const submitBtn = document.getElementById('submit-btn');
+            const comment = document.getElementById('comment').value;
+            const errorMessage = document.getElementById('error-message');
+
+            if (selectedRating === 0) {
+                showError('Veuillez sélectionner une note avant de soumettre.');
+                return;
+            }
+
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours...';
+            errorMessage.classList.remove('show');
+
+            try {
+                const response = await fetch(`${API_URL}/feedback/rate`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        menu_date: menuDate,
+                        rating: selectedRating,
+                        comment: comment
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erreur lors de l\'envoi de l\'évaluation');
+                }
+
+                const result = await response.json();
+                showSuccess(result);
+
+            } catch (error) {
+                console.error('Error submitting rating:', error);
+                showError('Une erreur est survenue. Veuillez réessayer.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Envoyer mon avis';
+            }
+        }
+
+        function showSuccess(result) {
+            const ratingForm = document.getElementById('rating-form');
+            const successMessage = document.getElementById('success-message');
+            const statsEl = document.getElementById('stats');
+
+            // Hide form, show success
+            ratingForm.style.display = 'none';
+            successMessage.classList.add('show');
+
+            // Display stats
+            const score = result.popularity_score || 0;
+            const totalRatings = result.total_ratings || 0;
+            const carrotDisplay = '🥕'.repeat(Math.round(score));
+
+            statsEl.innerHTML = `
+                <div class="stats-item"><strong>Note moyenne:</strong> ${score}/5 ${carrotDisplay}</div>
+                <div class="stats-item"><strong>Nombre d'avis:</strong> ${totalRatings}</div>
+            `;
+        }
+
+        function showError(message) {
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.textContent = message;
+            errorMessage.classList.add('show');
+        }
+    </script>
+</body>
+</html>

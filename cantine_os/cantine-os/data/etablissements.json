@@ -1,0 +1,68 @@
+[
+    {
+        "id": "etab_001",
+        "nom": "École Maternelle Les Petits Chênes",
+        "type": "maternelle",
+        "convives": [
+            {
+                "label": "Maternelle",
+                "age_min": 3,
+                "age_max": 6,
+                "effectif": 80
+            }
+        ],
+        "budget_max_par_repas": 1.80,
+        "equipement_disponible": [
+            "four",
+            "cuisson_vapeur",
+            "mixeur",
+            "plaque_cuisson"
+        ],
+        "priorites": {
+            "budget": 0.4,
+            "carbone": 0.3,
+            "local": 0.3
+        },
+        "contact": {
+            "responsable": "Marie Dupont",
+            "telephone": "01 23 45 67 89"
+        },
+        "adresse": {
+            "ville": "Lyon",
+            "code_postal": "69003"
+        }
+    },
+    {
+        "id": "etab_002",
+        "nom": "École Élémentaire Jean Jaurès",
+        "type": "elementaire",
+        "convives": [
+            {
+                "label": "Élémentaire",
+                "age_min": 6,
+                "age_max": 11,
+                "effectif": 150
+            }
+        ],
+        "budget_max_par_repas": 2.10,
+        "equipement_disponible": [
+            "four",
+            "cuisson_vapeur",
+            "sauterelle",
+            "marmite"
+        ],
+        "priorites": {
+            "budget": 0.5,
+            "carbone": 0.2,
+            "local": 0.3
+        },
+        "contact": {
+            "responsable": "Pierre Martin",
+            "telephone": "01 23 45 67 90"
+        },
+        "adresse": {
+            "ville": "Lyon",
+            "code_postal": "69003"
+        }
+    }
+]

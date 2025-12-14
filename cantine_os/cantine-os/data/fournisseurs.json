@@ -1,0 +1,2261 @@
+{
+    "fournisseurs": [
+        {
+            "id": "f001",
+            "nom": "Abattoir Moderne",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@abattoirmoderne.fr",
+                "telephone": "04 80 92 17 42"
+            },
+            "localisation": {
+                "adresse": "111 Chemin du Mas",
+                "ville": "Sète",
+                "code_postal": "34200",
+                "distance_km": 58
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 3,
+            "jours_livraison": [
+                "lundi"
+            ],
+            "minimum_commande_euro": 50,
+            "produits": [
+                {
+                    "id": "p001",
+                    "nom": "Foie de Veau",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 15.0,
+                    "bio": false,
+                    "origine": "France (Indre)",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f002",
+            "nom": "Abattoir Régional",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@abattoirrgional.fr",
+                "telephone": "04 40 37 78 91"
+            },
+            "localisation": {
+                "adresse": "12 Chemin du Mas",
+                "ville": "Sète",
+                "code_postal": "34200",
+                "distance_km": 24
+            },
+            "labels": [
+                "local",
+                "HVE"
+            ],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "mardi",
+                "mercredi",
+                "lundi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p002",
+                    "nom": "Côtes d'agneau",
+                    "categorie": "viande",
+                    "unite": "Kg",
+                    "prix_unitaire": 16.5,
+                    "bio": false,
+                    "origine": "France (Occitanie)",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f003",
+            "nom": "Bio Céréales",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@biocrales.fr",
+                "telephone": "04 68 85 78 72"
+            },
+            "localisation": {
+                "adresse": "121 Impasse des Oliviers",
+                "ville": "Montpellier",
+                "code_postal": "34000",
+                "distance_km": 139
+            },
+            "labels": [
+                "bio"
+            ],
+            "delai_livraison_jours": 5,
+            "jours_livraison": [
+                "mercredi",
+                "vendredi",
+                "jeudi"
+            ],
+            "minimum_commande_euro": 100,
+            "produits": [
+                {
+                    "id": "p003",
+                    "nom": "Millet (grain)",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 3.5,
+                    "bio": true,
+                    "origine": "Hongrie",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f004",
+            "nom": "Boucherie Tradition",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@boucherietradition.fr",
+                "telephone": "04 33 82 82 92"
+            },
+            "localisation": {
+                "adresse": "74 Zone Industrielle",
+                "ville": "Sète",
+                "code_postal": "34200",
+                "distance_km": 112
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 5,
+            "jours_livraison": [
+                "mardi"
+            ],
+            "minimum_commande_euro": 200,
+            "produits": [
+                {
+                    "id": "p004",
+                    "nom": "Filet mignon de porc",
+                    "categorie": "viande",
+                    "unite": "Kg",
+                    "prix_unitaire": 11.5,
+                    "bio": false,
+                    "origine": "France (Centre)",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f005",
+            "nom": "Boucherie d'Excellence",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@boucheriedexcellence.fr",
+                "telephone": "04 51 73 80 15"
+            },
+            "localisation": {
+                "adresse": "61 Route des Vignes",
+                "ville": "Montpellier",
+                "code_postal": "34000",
+                "distance_km": 57
+            },
+            "labels": [
+                "HVE"
+            ],
+            "delai_livraison_jours": 3,
+            "jours_livraison": [
+                "mardi",
+                "jeudi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p005",
+                    "nom": "Gigot d'agneau",
+                    "categorie": "viande",
+                    "unite": "Kg",
+                    "prix_unitaire": 22.0,
+                    "bio": false,
+                    "origine": "Nouvelle-Zélande",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f006",
+            "nom": "Boucherie du Chef",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@boucherieduchef.fr",
+                "telephone": "04 76 74 71 22"
+            },
+            "localisation": {
+                "adresse": "40 Chemin du Mas",
+                "ville": "Mauguio",
+                "code_postal": "34130",
+                "distance_km": 103
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 3,
+            "jours_livraison": [
+                "lundi",
+                "jeudi",
+                "mardi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p006",
+                    "nom": "Haché de Bœuf (vrac)",
+                    "categorie": "viande",
+                    "unite": "Kg",
+                    "prix_unitaire": 9.5,
+                    "bio": false,
+                    "origine": "France (Allier)",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f007",
+            "nom": "Boucherie du Terroir",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@boucherieduterroir.fr",
+                "telephone": "04 23 97 15 91"
+            },
+            "localisation": {
+                "adresse": "100 Impasse des Oliviers",
+                "ville": "Sète",
+                "code_postal": "34200",
+                "distance_km": 64
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "lundi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p007",
+                    "nom": "Rognons de veau",
+                    "categorie": "viande",
+                    "unite": "Kg",
+                    "prix_unitaire": 11.0,
+                    "bio": false,
+                    "origine": "France (Aveyron)",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f008",
+            "nom": "Boucherie moderne",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@boucheriemoderne.fr",
+                "telephone": "04 67 45 89 66"
+            },
+            "localisation": {
+                "adresse": "132 Zone Industrielle",
+                "ville": "Montpellier",
+                "code_postal": "34000",
+                "distance_km": 119
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 3,
+            "jours_livraison": [
+                "mercredi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p008",
+                    "nom": "Échine de porc (désossée)",
+                    "categorie": "viande",
+                    "unite": "Kg",
+                    "prix_unitaire": 6.5,
+                    "bio": false,
+                    "origine": "France (Mayenne)",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f009",
+            "nom": "Brasserie Locale",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@brasserielocale.fr",
+                "telephone": "04 52 34 72 43"
+            },
+            "localisation": {
+                "adresse": "24 Impasse des Oliviers",
+                "ville": "Lattes",
+                "code_postal": "34970",
+                "distance_km": 124
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "mercredi",
+                "jeudi"
+            ],
+            "minimum_commande_euro": 100,
+            "produits": [
+                {
+                    "id": "p009",
+                    "nom": "Levure de Boulanger",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 8.0,
+                    "bio": false,
+                    "origine": "France (Nord)",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f010",
+            "nom": "Coop. Fruits Secs",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@coopfruitssecs.fr",
+                "telephone": "04 83 96 22 23"
+            },
+            "localisation": {
+                "adresse": "111 Impasse des Oliviers",
+                "ville": "Mauguio",
+                "code_postal": "34130",
+                "distance_km": 91
+            },
+            "labels": [
+                "bio"
+            ],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "mardi",
+                "vendredi"
+            ],
+            "minimum_commande_euro": 200,
+            "produits": [
+                {
+                    "id": "p010",
+                    "nom": "Dattes Medjool (vrac)",
+                    "categorie": "fruits",
+                    "unite": "Kg",
+                    "prix_unitaire": 10.5,
+                    "bio": true,
+                    "origine": "Tunisie",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f011",
+            "nom": "Coopérative Pêcheurs Unis",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@cooprativepcheursunis.fr",
+                "telephone": "04 11 92 31 69"
+            },
+            "localisation": {
+                "adresse": "75 Impasse des Oliviers",
+                "ville": "Lunel",
+                "code_postal": "34400",
+                "distance_km": 13
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 4,
+            "jours_livraison": [
+                "lundi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p011",
+                    "nom": "Filet de Cabillaud",
+                    "categorie": "poisson",
+                    "unite": "Kg",
+                    "prix_unitaire": 14.5,
+                    "bio": false,
+                    "origine": "Atlantique Nord",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": [
+                        "poisson"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f012",
+            "nom": "Cultures Saines",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@culturessaines.fr",
+                "telephone": "04 95 27 69 35"
+            },
+            "localisation": {
+                "adresse": "122 Rue du Port",
+                "ville": "Mauguio",
+                "code_postal": "34130",
+                "distance_km": 19
+            },
+            "labels": [
+                "bio"
+            ],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "lundi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p012",
+                    "nom": "Brocolis",
+                    "categorie": "legumes",
+                    "unite": "Kg",
+                    "prix_unitaire": 2.4,
+                    "bio": true,
+                    "origine": "France (Finistère)",
+                    "disponibilite_mois": [
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f013",
+            "nom": "Cultures Sous Serre",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@culturessousserre.fr",
+                "telephone": "04 25 33 26 37"
+            },
+            "localisation": {
+                "adresse": "31 Zone Industrielle",
+                "ville": "Lunel",
+                "code_postal": "34400",
+                "distance_km": 127
+            },
+            "labels": [],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "vendredi",
+                "lundi",
+                "mardi"
+            ],
+            "minimum_commande_euro": 200,
+            "produits": [
+                {
+                    "id": "p013",
+                    "nom": "Poivrons rouges",
+                    "categorie": "legumes",
+                    "unite": "Kg",
+                    "prix_unitaire": 3.0,
+                    "bio": false,
+                    "origine": "Pays-Bas",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f014",
+            "nom": "Cultures Tropicales",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@culturestropicales.fr",
+                "telephone": "04 94 31 71 28"
+            },
+            "localisation": {
+                "adresse": "91 Rue du Port",
+                "ville": "Lunel",
+                "code_postal": "34400",
+                "distance_km": 76
+            },
+            "labels": [],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "jeudi",
+                "vendredi"
+            ],
+            "minimum_commande_euro": 50,
+            "produits": [
+                {
+                    "id": "p014",
+                    "nom": "Avocats (bruts)",
+                    "categorie": "fruits",
+                    "unite": "Pièce",
+                    "prix_unitaire": 1.5,
+                    "bio": false,
+                    "origine": "Pérou",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f015",
+            "nom": "Cultures d'Eau",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@culturesdeau.fr",
+                "telephone": "04 17 65 63 36"
+            },
+            "localisation": {
+                "adresse": "12 Chemin du Mas",
+                "ville": "Lattes",
+                "code_postal": "34970",
+                "distance_km": 121
+            },
+            "labels": [],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "mardi",
+                "jeudi"
+            ],
+            "minimum_commande_euro": 100,
+            "produits": [
+                {
+                    "id": "p015",
+                    "nom": "Salade Laitue",
+                    "categorie": "legumes",
+                    "unite": "Pièce",
+                    "prix_unitaire": 0.9,
+                    "bio": false,
+                    "origine": "France (Ile-de-France)",
+                    "disponibilite_mois": [
+                        3,
+                        4,
+                        5,
+                        6
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f016",
+            "nom": "Cultures d'Hiver",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@culturesdhiver.fr",
+                "telephone": "04 72 14 78 30"
+            },
+            "localisation": {
+                "adresse": "27 Zone Industrielle",
+                "ville": "Lunel",
+                "code_postal": "34400",
+                "distance_km": 35
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "mercredi"
+            ],
+            "minimum_commande_euro": 200,
+            "produits": [
+                {
+                    "id": "p016",
+                    "nom": "Choux de Bruxelles (vrac)",
+                    "categorie": "legumes",
+                    "unite": "Kg",
+                    "prix_unitaire": 2.2,
+                    "bio": false,
+                    "origine": "Belgique",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f017",
+            "nom": "Cultures d'été",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@culturesdt.fr",
+                "telephone": "04 86 35 87 63"
+            },
+            "localisation": {
+                "adresse": "98 Route des Vignes",
+                "ville": "Sète",
+                "code_postal": "34200",
+                "distance_km": 6
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "mercredi"
+            ],
+            "minimum_commande_euro": 50,
+            "produits": [
+                {
+                    "id": "p017",
+                    "nom": "Maïs doux (épis)",
+                    "categorie": "autre",
+                    "unite": "Pièce",
+                    "prix_unitaire": 0.8,
+                    "bio": false,
+                    "origine": "France (Gironde)",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f018",
+            "nom": "Cultures de Montagne",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@culturesdemontagne.fr",
+                "telephone": "04 82 57 85 72"
+            },
+            "localisation": {
+                "adresse": "11 Zone Industrielle",
+                "ville": "Mauguio",
+                "code_postal": "34130",
+                "distance_km": 81
+            },
+            "labels": [
+                "bio",
+                "local"
+            ],
+            "delai_livraison_jours": 5,
+            "jours_livraison": [
+                "jeudi"
+            ],
+            "minimum_commande_euro": 50,
+            "produits": [
+                {
+                    "id": "p018",
+                    "nom": "Sarrasin décortiqué",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 3.6,
+                    "bio": true,
+                    "origine": "Russie",
+                    "disponibilite_mois": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f019",
+            "nom": "Cultures de Plein Air",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@culturesdepleinair.fr",
+                "telephone": "04 52 13 64 71"
+            },
+            "localisation": {
+                "adresse": "138 Route des Vignes",
+                "ville": "Lattes",
+                "code_postal": "34970",
+                "distance_km": 76
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 3,
+            "jours_livraison": [
+                "jeudi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p019",
+                    "nom": "Céleri-branche",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 2.5,
+                    "bio": false,
+                    "origine": "France (Hérault)",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f020",
+            "nom": "Cultures de Serre",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@culturesdeserre.fr",
+                "telephone": "04 72 50 92 66"
+            },
+            "localisation": {
+                "adresse": "114 Chemin du Mas",
+                "ville": "Sète",
+                "code_postal": "34200",
+                "distance_km": 84
+            },
+            "labels": [
+                "HVE"
+            ],
+            "delai_livraison_jours": 3,
+            "jours_livraison": [
+                "mercredi",
+                "lundi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p020",
+                    "nom": "Poireaux (mini)",
+                    "categorie": "fruits",
+                    "unite": "Kg",
+                    "prix_unitaire": 3.1,
+                    "bio": false,
+                    "origine": "Pays-Bas",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f021",
+            "nom": "Céréales complètes",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@cralescompltes.fr",
+                "telephone": "04 76 13 51 49"
+            },
+            "localisation": {
+                "adresse": "94 Zone Industrielle",
+                "ville": "Lunel",
+                "code_postal": "34400",
+                "distance_km": 73
+            },
+            "labels": [
+                "bio"
+            ],
+            "delai_livraison_jours": 5,
+            "jours_livraison": [
+                "vendredi",
+                "lundi",
+                "mardi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p021",
+                    "nom": "Riz complet",
+                    "categorie": "epicerie_seche",
+                    "unite": "Kg",
+                    "prix_unitaire": 3.9,
+                    "bio": true,
+                    "origine": "Italie",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f022",
+            "nom": "Céréales du Bon Grain",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@cralesdubongrain.fr",
+                "telephone": "04 22 15 10 41"
+            },
+            "localisation": {
+                "adresse": "146 Chemin du Mas",
+                "ville": "Lunel",
+                "code_postal": "34400",
+                "distance_km": 49
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 4,
+            "jours_livraison": [
+                "mardi",
+                "mercredi"
+            ],
+            "minimum_commande_euro": 50,
+            "produits": [
+                {
+                    "id": "p022",
+                    "nom": "Semoule de blé dur",
+                    "categorie": "epicerie_seche",
+                    "unite": "Kg",
+                    "prix_unitaire": 1.5,
+                    "bio": false,
+                    "origine": "Maroc",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": [
+                        "gluten"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f023",
+            "nom": "Céréales du Monde",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@cralesdumonde.fr",
+                "telephone": "04 63 23 98 12"
+            },
+            "localisation": {
+                "adresse": "40 Route des Vignes",
+                "ville": "Lunel",
+                "code_postal": "34400",
+                "distance_km": 89
+            },
+            "labels": [
+                "bio",
+                "HVE"
+            ],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "mercredi",
+                "vendredi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p023",
+                    "nom": "Boulgour",
+                    "categorie": "epicerie_seche",
+                    "unite": "Kg",
+                    "prix_unitaire": 2.2,
+                    "bio": true,
+                    "origine": "Turquie",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": [
+                        "gluten"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f024",
+            "nom": "Céréales du Plateau",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@cralesduplateau.fr",
+                "telephone": "04 89 93 43 90"
+            },
+            "localisation": {
+                "adresse": "62 Zone Industrielle",
+                "ville": "Sète",
+                "code_postal": "34200",
+                "distance_km": 16
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 4,
+            "jours_livraison": [
+                "mercredi",
+                "vendredi",
+                "mardi"
+            ],
+            "minimum_commande_euro": 200,
+            "produits": [
+                {
+                    "id": "p024",
+                    "nom": "Farine de blé T65",
+                    "categorie": "epicerie_seche",
+                    "unite": "Sac",
+                    "prix_unitaire": 18.0,
+                    "bio": false,
+                    "origine": "France (Beauce)",
+                    "disponibilite_mois": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ],
+                    "allergenes": [
+                        "gluten"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f025",
+            "nom": "Distributeur Asie Ouest",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@distributeurasieouest.fr",
+                "telephone": "04 72 58 54 26"
+            },
+            "localisation": {
+                "adresse": "7 Zone Industrielle",
+                "ville": "Mauguio",
+                "code_postal": "34130",
+                "distance_km": 25
+            },
+            "labels": [],
+            "delai_livraison_jours": 5,
+            "jours_livraison": [
+                "mardi",
+                "lundi",
+                "vendredi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p025",
+                    "nom": "Noodles de riz (secs)",
+                    "categorie": "epicerie_seche",
+                    "unite": "Kg",
+                    "prix_unitaire": 3.0,
+                    "bio": false,
+                    "origine": "Chine",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f026",
+            "nom": "Distributeur Café",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@distributeurcaf.fr",
+                "telephone": "04 71 17 99 70"
+            },
+            "localisation": {
+                "adresse": "5 Avenue de la Gare",
+                "ville": "Montpellier",
+                "code_postal": "34000",
+                "distance_km": 124
+            },
+            "labels": [
+                "local",
+                "HVE"
+            ],
+            "delai_livraison_jours": 3,
+            "jours_livraison": [
+                "lundi",
+                "vendredi",
+                "mardi"
+            ],
+            "minimum_commande_euro": 100,
+            "produits": [
+                {
+                    "id": "p026",
+                    "nom": "Grains de Café Vert",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 10.5,
+                    "bio": false,
+                    "origine": "Brésil",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f027",
+            "nom": "Distributeur de Fruits Secs",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@distributeurdefruitssecs.fr",
+                "telephone": "04 27 24 25 76"
+            },
+            "localisation": {
+                "adresse": "90 Impasse des Oliviers",
+                "ville": "Lunel",
+                "code_postal": "34400",
+                "distance_km": 44
+            },
+            "labels": [
+                "bio",
+                "local",
+                "HVE"
+            ],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "jeudi",
+                "lundi",
+                "mercredi"
+            ],
+            "minimum_commande_euro": 100,
+            "produits": [
+                {
+                    "id": "p027",
+                    "nom": "Figues séchées (vrac)",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 6.8,
+                    "bio": true,
+                    "origine": "Turquie",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f028",
+            "nom": "Distributeur Épices",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@distributeurpices.fr",
+                "telephone": "04 10 53 54 87"
+            },
+            "localisation": {
+                "adresse": "93 Chemin du Mas",
+                "ville": "Mauguio",
+                "code_postal": "34130",
+                "distance_km": 97
+            },
+            "labels": [],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "mercredi",
+                "lundi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p028",
+                    "nom": "Poivre noir (grains)",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 15.0,
+                    "bio": false,
+                    "origine": "Vietnam",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f029",
+            "nom": "Ferme Bio Déméter",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermebiodmter.fr",
+                "telephone": "04 73 38 54 18"
+            },
+            "localisation": {
+                "adresse": "19 Rue du Port",
+                "ville": "Lunel",
+                "code_postal": "34400",
+                "distance_km": 71
+            },
+            "labels": [
+                "bio"
+            ],
+            "delai_livraison_jours": 5,
+            "jours_livraison": [
+                "lundi",
+                "mardi",
+                "vendredi"
+            ],
+            "minimum_commande_euro": 200,
+            "produits": [
+                {
+                    "id": "p029",
+                    "nom": "Épinards frais",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 3.5,
+                    "bio": true,
+                    "origine": "France (Sarthe)",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f030",
+            "nom": "Ferme Des Ormeaux",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermedesormeaux.fr",
+                "telephone": "04 30 34 16 49"
+            },
+            "localisation": {
+                "adresse": "78 Route des Vignes",
+                "ville": "Lunel",
+                "code_postal": "34400",
+                "distance_km": 64
+            },
+            "labels": [
+                "bio"
+            ],
+            "delai_livraison_jours": 5,
+            "jours_livraison": [
+                "mardi",
+                "lundi",
+                "jeudi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p030",
+                    "nom": "Poireaux",
+                    "categorie": "fruits",
+                    "unite": "Kg",
+                    "prix_unitaire": 2.0,
+                    "bio": true,
+                    "origine": "France (Normandie)",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f031",
+            "nom": "Ferme des Saules",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermedessaules.fr",
+                "telephone": "04 27 96 89 21"
+            },
+            "localisation": {
+                "adresse": "24 Impasse des Oliviers",
+                "ville": "Lattes",
+                "code_postal": "34970",
+                "distance_km": 48
+            },
+            "labels": [],
+            "delai_livraison_jours": 5,
+            "jours_livraison": [
+                "mardi",
+                "jeudi",
+                "lundi"
+            ],
+            "minimum_commande_euro": 50,
+            "produits": [
+                {
+                    "id": "p031",
+                    "nom": "Radis",
+                    "categorie": "autre",
+                    "unite": "Botte",
+                    "prix_unitaire": 0.8,
+                    "bio": false,
+                    "origine": "France (Loiret)",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f032",
+            "nom": "Ferme Du Plateau",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermeduplateau.fr",
+                "telephone": "04 12 46 14 77"
+            },
+            "localisation": {
+                "adresse": "150 Avenue de la Gare",
+                "ville": "Montpellier",
+                "code_postal": "34000",
+                "distance_km": 78
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "mardi",
+                "lundi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p032",
+                    "nom": "Courgettes",
+                    "categorie": "legumes",
+                    "unite": "Kg",
+                    "prix_unitaire": 1.6,
+                    "bio": false,
+                    "origine": "France (Hérault)",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f033",
+            "nom": "Ferme des Bois",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermedesbois.fr",
+                "telephone": "04 55 32 99 52"
+            },
+            "localisation": {
+                "adresse": "22 Avenue de la Gare",
+                "ville": "Lattes",
+                "code_postal": "34970",
+                "distance_km": 31
+            },
+            "labels": [
+                "bio",
+                "HVE"
+            ],
+            "delai_livraison_jours": 4,
+            "jours_livraison": [
+                "vendredi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p033",
+                    "nom": "Asperges vertes",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 7.0,
+                    "bio": true,
+                    "origine": "France (Aquitaine)",
+                    "disponibilite_mois": [
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f034",
+            "nom": "Ferme des Bois Noirs",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermedesboisnoirs.fr",
+                "telephone": "04 61 67 31 43"
+            },
+            "localisation": {
+                "adresse": "25 Route des Vignes",
+                "ville": "Lattes",
+                "code_postal": "34970",
+                "distance_km": 133
+            },
+            "labels": [],
+            "delai_livraison_jours": 4,
+            "jours_livraison": [
+                "mardi",
+                "vendredi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p034",
+                    "nom": "Mûres sauvages (brutes)",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 8.0,
+                    "bio": false,
+                    "origine": "France (Vosges)",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f035",
+            "nom": "Ferme des Lilas",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermedeslilas.fr",
+                "telephone": "04 73 45 47 10"
+            },
+            "localisation": {
+                "adresse": "116 Avenue de la Gare",
+                "ville": "Montpellier",
+                "code_postal": "34000",
+                "distance_km": 92
+            },
+            "labels": [],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "jeudi",
+                "vendredi",
+                "mercredi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p035",
+                    "nom": "Pommes de terre",
+                    "categorie": "fruits",
+                    "unite": "Kg",
+                    "prix_unitaire": 0.85,
+                    "bio": false,
+                    "origine": "France (Picardie)",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f036",
+            "nom": "Ferme des Petits Fruits",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermedespetitsfruits.fr",
+                "telephone": "04 28 30 97 67"
+            },
+            "localisation": {
+                "adresse": "102 Impasse des Oliviers",
+                "ville": "Lunel",
+                "code_postal": "34400",
+                "distance_km": 29
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "lundi",
+                "mardi"
+            ],
+            "minimum_commande_euro": 50,
+            "produits": [
+                {
+                    "id": "p036",
+                    "nom": "Groseilles (vrac)",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 7.0,
+                    "bio": false,
+                    "origine": "France (Lorraine)",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f037",
+            "nom": "Ferme des Sables",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermedessables.fr",
+                "telephone": "04 62 65 77 20"
+            },
+            "localisation": {
+                "adresse": "50 Avenue de la Gare",
+                "ville": "Sète",
+                "code_postal": "34200",
+                "distance_km": 103
+            },
+            "labels": [
+                "bio"
+            ],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "mardi",
+                "lundi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p037",
+                    "nom": "Haricots verts (surgelés)",
+                    "categorie": "legumineuses",
+                    "unite": "Kg",
+                    "prix_unitaire": 3.5,
+                    "bio": true,
+                    "origine": "France (Lot)",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f038",
+            "nom": "Ferme des Saisons",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermedessaisons.fr",
+                "telephone": "04 51 67 84 64"
+            },
+            "localisation": {
+                "adresse": "31 Rue du Port",
+                "ville": "Lattes",
+                "code_postal": "34970",
+                "distance_km": 29
+            },
+            "labels": [
+                "bio",
+                "HVE"
+            ],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "vendredi"
+            ],
+            "minimum_commande_euro": 200,
+            "produits": [
+                {
+                    "id": "p038",
+                    "nom": "Rutabaga",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 1.2,
+                    "bio": true,
+                    "origine": "France (Bourgogne)",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f039",
+            "nom": "Ferme des Sources",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermedessources.fr",
+                "telephone": "04 65 83 11 97"
+            },
+            "localisation": {
+                "adresse": "48 Chemin du Mas",
+                "ville": "Montpellier",
+                "code_postal": "34000",
+                "distance_km": 140
+            },
+            "labels": [
+                "local"
+            ],
+            "delai_livraison_jours": 4,
+            "jours_livraison": [
+                "mercredi",
+                "lundi"
+            ],
+            "minimum_commande_euro": 200,
+            "produits": [
+                {
+                    "id": "p039",
+                    "nom": "Céleri-rave",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 1.3,
+                    "bio": false,
+                    "origine": "France (Vosges)",
+                    "disponibilite_mois": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f040",
+            "nom": "Ferme du Gros Chêne",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermedugroschne.fr",
+                "telephone": "04 30 96 95 78"
+            },
+            "localisation": {
+                "adresse": "56 Chemin du Mas",
+                "ville": "Sète",
+                "code_postal": "34200",
+                "distance_km": 111
+            },
+            "labels": [
+                "bio",
+                "local"
+            ],
+            "delai_livraison_jours": 5,
+            "jours_livraison": [
+                "jeudi",
+                "lundi",
+                "mercredi"
+            ],
+            "minimum_commande_euro": 200,
+            "produits": [
+                {
+                    "id": "p040",
+                    "nom": "Chou Vert frisé",
+                    "categorie": "legumes",
+                    "unite": "Kg",
+                    "prix_unitaire": 1.9,
+                    "bio": true,
+                    "origine": "France (Somme)",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f042",
+            "nom": "Ferme du Pré Vert",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermeduprvert.fr",
+                "telephone": "04 26 49 45 49"
+            },
+            "localisation": {
+                "adresse": "32 Chemin du Mas",
+                "ville": "Mauguio",
+                "code_postal": "34130",
+                "distance_km": 71
+            },
+            "labels": [],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "mardi",
+                "lundi",
+                "jeudi"
+            ],
+            "minimum_commande_euro": 50,
+            "produits": [
+                {
+                    "id": "p042",
+                    "nom": "Blettes (feuilles et côtes)",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 2.7,
+                    "bio": false,
+                    "origine": "France (Puy-de-Dôme)",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f043",
+            "nom": "Ferme du Roussillon",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermeduroussillon.fr",
+                "telephone": "04 99 49 97 92"
+            },
+            "localisation": {
+                "adresse": "20 Zone Industrielle",
+                "ville": "Mauguio",
+                "code_postal": "34130",
+                "distance_km": 44
+            },
+            "labels": [],
+            "delai_livraison_jours": 4,
+            "jours_livraison": [
+                "vendredi",
+                "lundi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p043",
+                    "nom": "Artichauts (bruts)",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 3.5,
+                    "bio": false,
+                    "origine": "France (Roussillon)",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f044",
+            "nom": "Ferme du Val Fleuri",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermeduvalfleuri.fr",
+                "telephone": "04 42 18 36 92"
+            },
+            "localisation": {
+                "adresse": "43 Chemin du Mas",
+                "ville": "Lattes",
+                "code_postal": "34970",
+                "distance_km": 133
+            },
+            "labels": [
+                "HVE"
+            ],
+            "delai_livraison_jours": 5,
+            "jours_livraison": [
+                "mardi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p044",
+                    "nom": "Carottes",
+                    "categorie": "legumes",
+                    "unite": "Kg",
+                    "prix_unitaire": 1.5,
+                    "bio": false,
+                    "origine": "France (Val de Loire)",
+                    "disponibilite_mois": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f045",
+            "nom": "Ferme maraîchère BIO",
+            "type": "producteur",
+            "contact": {
+                "email": "contact@fermemarachrebio.fr",
+                "telephone": "04 81 37 65 87"
+            },
+            "localisation": {
+                "adresse": "38 Route des Vignes",
+                "ville": "Lattes",
+                "code_postal": "34970",
+                "distance_km": 18
+            },
+            "labels": [
+                "bio",
+                "local"
+            ],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "lundi",
+                "mardi",
+                "jeudi"
+            ],
+            "minimum_commande_euro": 200,
+            "produits": [
+                {
+                    "id": "p045",
+                    "nom": "Céleri branche",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 2.1,
+                    "bio": true,
+                    "origine": "France (Bretagne)",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f046",
+            "localisation": {
+                "adresse": "25 Avenue de la Gare",
+                "ville": "Mauguio",
+                "code_postal": "34130",
+                "distance_km": 132
+            },
+            "labels": [],
+            "delai_livraison_jours": 4,
+            "jours_livraison": [
+                "lundi"
+            ],
+            "minimum_commande_euro": 100,
+            "produits": [
+                {
+                    "id": "p046",
+                    "nom": "Pâtes (Coquillettes)",
+                    "categorie": "epicerie_seche",
+                    "unite": "Kg",
+                    "prix_unitaire": 1.8,
+                    "bio": false,
+                    "origine": "Italie",
+                    "disponibilite_mois": [
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ],
+                    "allergenes": [
+                        "gluten"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f047",
+            "nom": "Fromagerie L'Ancienne",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@fromagerielancienne.fr",
+                "telephone": "04 80 31 19 26"
+            },
+            "localisation": {
+                "adresse": "18 Chemin du Mas",
+                "ville": "Lattes",
+                "code_postal": "34970",
+                "distance_km": 19
+            },
+            "labels": [],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [
+                "mardi"
+            ],
+            "minimum_commande_euro": 80,
+            "produits": [
+                {
+                    "id": "p047",
+                    "nom": "Fromage blanc de Campagne",
+                    "categorie": "produit_laitier",
+                    "unite": "Kg",
+                    "prix_unitaire": 5.5,
+                    "bio": false,
+                    "origine": "France (Jura)",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": [
+                        "lait"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f048",
+            "nom": "Fromages de Caractère",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@fromagesdecaractre.fr",
+                "telephone": "04 15 64 68 56"
+            },
+            "localisation": {
+                "adresse": "50 Route des Vignes",
+                "ville": "Mauguio",
+                "code_postal": "34130",
+                "distance_km": 24
+            },
+            "labels": [
+                "bio",
+                "local",
+                "HVE"
+            ],
+            "delai_livraison_jours": 2,
+            "jours_livraison": [
+                "mercredi"
+            ],
+            "minimum_commande_euro": 100,
+            "produits": [
+                {
+                    "id": "p048",
+                    "nom": "Feta (vrac)",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 8.5,
+                    "bio": true,
+                    "origine": "Grèce",
+                    "disponibilite_mois": [
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f049",
+            "nom": "Fumeur des Mers",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@fumeurdesmers.fr",
+                "telephone": "04 94 57 59 60"
+            },
+            "localisation": {
+                "adresse": "11 Zone Industrielle",
+                "ville": "Sète",
+                "code_postal": "34200",
+                "distance_km": 103
+            },
+            "labels": [
+                "local",
+                "HVE"
+            ],
+            "delai_livraison_jours": 3,
+            "jours_livraison": [
+                "jeudi"
+            ],
+            "minimum_commande_euro": 150,
+            "produits": [
+                {
+                    "id": "p049",
+                    "nom": "Saumon (pavé cru)",
+                    "categorie": "poisson",
+                    "unite": "Kg",
+                    "prix_unitaire": 19.9,
+                    "bio": false,
+                    "origine": "Norvège",
+                    "disponibilite_mois": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12
+                    ],
+                    "allergenes": [
+                        "poisson"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f050",
+            "nom": "Graines & Compagnie",
+            "type": "grossiste",
+            "contact": {
+                "email": "contact@grainescompagnie.fr",
+                "telephone": "04 72 72 76 80"
+            },
+            "localisation": {
+                "adresse": "68 Rue du Port",
+                "ville": "Montpellier",
+                "code_postal": "34000",
+                "distance_km": 75
+            },
+            "labels": [
+                "bio"
+            ],
+            "delai_livraison_jours": 3,
+            "jours_livraison": [
+                "vendredi",
+                "jeudi"
+            ],
+            "minimum_commande_euro": 100,
+            "produits": [
+                {
+                    "id": "p050",
+                    "nom": "Graines de lin doré",
+                    "categorie": "autre",
+                    "unite": "Kg",
+                    "prix_unitaire": 4.5,
+                    "bio": true,
+                    "origine": "Canada",
+                    "disponibilite_mois": [
+                        10,
+                        11,
+                        12,
+                        1,
+                        2,
+                        3
+                    ],
+                    "allergenes": []
+                }
+            ]
+        },
+        {
+            "id": "f041",
+            "nom": "Test Supplier Updated",
+            "type": "grossiste",
+            "contact": {
+                "email": "updated@test.com",
+                "telephone": "9876543210"
+            },
+            "localisation": {
+                "adresse": "",
+                "ville": "Updated City",
+                "code_postal": "54321",
+                "distance_km": 0
+            },
+            "labels": [
+                "bio"
+            ],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [],
+            "minimum_commande_euro": 0,
+            "produits": []
+        },
+        {
+            "id": "f051",
+            "nom": "Nouveau Fournisseur Test",
+            "type": "producteur",
+            "contact": {
+                "email": "nouveau@test.fr",
+                "telephone": "0600000000"
+            },
+            "localisation": {
+                "adresse": "",
+                "ville": "Paris",
+                "code_postal": "75001",
+                "distance_km": 10.0
+            },
+            "labels": [
+                "bio",
+                "local"
+            ],
+            "delai_livraison_jours": 1,
+            "jours_livraison": [],
+            "minimum_commande_euro": 0,
+            "produits": [
+                {
+                    "id": "p_new_001",
+                    "nom": "Tomates Bio",
+                    "categorie": "legumes",
+                    "unite": "kg",
+                    "prix_unitaire": 3.5,
+                    "bio": true,
+                    "origine": "France",
+                    "disponibilite_mois": [],
+                    "allergenes": []
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "version": "1.0",
+        "last_updated": "2024-12-13",
+        "description": "Catalogue des fournisseurs de la cantine"
+    }
+}

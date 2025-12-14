@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantine.OS - L'IA au service de la restauration collective</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gov: {
+                            blue: '#000091', // Bleu officiel gouvernement FR
+                            dark: '#1e293b',
+                        },
+                        brand: {
+                            green: '#10b981',
+                            light: '#d1fae5',
+                            accent: '#f59e0b'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #1e293b 0%, #000091 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animation classes for Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Typewriter Cursor */
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: #000091;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans text-slate-800 bg-slate-50 antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="w-8 h-8 bg-gov-blue rounded-lg flex items-center justify-center text-white font-bold shadow-md transform hover:rotate-12 transition">
+                        C</div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Cantine<span
+                            class="text-brand-green">.OS</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#solutions"
+                        class="hover:text-gov-blue transition hover:-translate-y-0.5 inline-block">Solutions</a>
+                    <a href="#heatmap" class="hover:text-gov-blue transition hover:-translate-y-0.5 inline-block">La
+                        Heatmap</a>
+                    <a href="#comparatif"
+                        class="hover:text-gov-blue transition hover:-translate-y-0.5 inline-block">Comparatif</a>
+                    <a href="#temoignages"
+                        class="hover:text-gov-blue transition hover:-translate-y-0.5 inline-block">Témoignages</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-gov-blue">Connexion</a>
+                    <a href="#demo"
+                        class="bg-gov-blue hover:bg-blue-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-lg hover:shadow-blue-900/20 transform hover:-translate-y-0.5">
+                        Audit Gratuit
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-gov-blue focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#solutions"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-gov-blue hover:bg-slate-50">Solutions</a>
+                <a href="#heatmap"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-gov-blue hover:bg-slate-50">La
+                    Heatmap</a>
+                <a href="#comparatif"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-gov-blue hover:bg-slate-50">Comparatif</a>
+                <div class="border-t border-slate-100 mt-2 pt-2">
+                    <a href="index.html" class="block px-3 py-2 text-base font-medium text-gov-blue">Connexion</a>
+                    <a href="#demo" class="block px-3 py-2 text-base font-medium text-brand-green font-bold">Demander un
+                        audit</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 hero-pattern overflow-hidden relative min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Text Content -->
+                <div class="text-center lg:text-left reveal active">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-gov-blue text-xs font-bold uppercase tracking-wide mb-6 border border-blue-100 shadow-sm">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
+                        </span>
+                        Conforme Egalim 2025
+                    </div>
+                    <h1
+                        class="text-4xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-slate-900 h-24 lg:h-32">
+                        La conformité <br>
+                        <span class="text-gov-blue" id="typewriter"></span><span class="cursor">&nbsp;</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Gestionnaires de collectivités : générez des menus équilibrés, respectez les quotas bio/végé et
+                        maîtrisez votre coût denrée (< 2,00€) grâce à l'IA. </p>
+
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                                <a href="index.html"
+                                    class="bg-gov-blue text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-blue-900/10 hover:bg-blue-800 transition transform hover:-translate-y-1 flex items-center justify-center gap-3 group">
+                                    Générer mon premier menu
+                                    <i class="fas fa-magic group-hover:rotate-12 transition"></i>
+                                </a>
+                                <button
+                                    class="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition flex items-center justify-center gap-2 hover:shadow-md">
+                                    <i class="fas fa-play-circle text-brand-green text-xl"></i>
+                                    Voir la démo
+                                </button>
+                            </div>
+
+                            <div
+                                class="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-500 font-medium">
+                                <span class="flex items-center gap-2"><i
+                                        class="fas fa-check-circle text-brand-green"></i> Compatible MaCantine</span>
+                                <span class="flex items-center gap-2"><i
+                                        class="fas fa-check-circle text-brand-green"></i> Export PNNS</span>
+                            </div>
+                </div>
+
+                <!-- Visual / Mockup Simulation -->
+                <div class="relative reveal delay-200">
+                    <!-- Background blobs -->
+                    <div
+                        class="absolute -top-20 -right-20 w-96 h-96 bg-brand-green/20 rounded-full blur-[80px] animate-pulse-slow">
+                    </div>
+                    <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-gov-blue/20 rounded-full blur-[80px] animate-pulse-slow"
+                        style="animation-delay: 1s;"></div>
+
+                    <!-- Main Card -->
+                    <div
+                        class="glass-card rounded-2xl p-6 relative z-10 transform rotate-1 hover:rotate-0 transition duration-700 animate-float border-t-4 border-t-gov-blue">
+                        <!-- Mockup Header -->
+                        <div class="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
+                            <div>
+                                <h3 class="font-bold text-slate-800">Planning Octobre 2025</h3>
+                                <p class="text-xs text-slate-500">École Primaire Jules Ferry • 450 couverts</p>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-brand-green">1.85€</div>
+                                <div class="text-xs text-slate-500">Coût moyen / repas</div>
+                            </div>
+                        </div>
+
+                        <!-- Mockup List -->
+                        <div class="space-y-3">
+                            <!-- Lundi -->
+                            <div
+                                class="flex items-center gap-4 p-3 bg-white rounded-lg border border-slate-100 shadow-sm hover:shadow-md transition cursor-default group relative overflow-hidden">
+                                <div class="absolute left-0 top-0 h-full w-1 bg-green-500"></div>
+                                <div
+                                    class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center text-green-600 font-bold text-sm group-hover:bg-green-100 transition">
+                                    LUN</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="font-semibold text-sm text-slate-800">Dahl de lentilles corail</h4>
+                                        <span
+                                            class="bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full font-bold">VÉGÉ</span>
+                                        <span
+                                            class="bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 rounded-full font-bold">BIO</span>
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">Fournisseur : Ferme des Yvelines (Circuit
+                                        court)</p>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-xs font-bold text-slate-700">Prot: 22g</div>
+                                    <div class="text-xs text-green-600"><i class="fas fa-check-circle"></i> OK</div>
+                                </div>
+                            </div>
+
+                            <!-- Mardi -->
+                            <div
+                                class="flex items-center gap-4 p-3 bg-white/60 rounded-lg border border-slate-100 opacity-80 hover:opacity-100 transition">
+                                <div
+                                    class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-500 font-bold text-sm">
+                                    MAR</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="font-semibold text-sm text-slate-700">Sauté de dinde marengo</h4>
+                                        <span
+                                            class="bg-yellow-100 text-yellow-700 text-[10px] px-2 py-0.5 rounded-full font-bold">LABEL
+                                            ROUGE</span>
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">Fournisseur : Volailles de l'Ouest</p>
+                                </div>
+                            </div>
+
+                            <!-- Mercredi -->
+                            <div
+                                class="flex items-center gap-4 p-3 bg-white/40 rounded-lg border border-slate-100 opacity-60 hover:opacity-100 transition">
+                                <div
+                                    class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-500 font-bold text-sm">
+                                    MER</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="font-semibold text-sm text-slate-700">Omelette aux champignons</h4>
+                                        <span
+                                            class="bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full font-bold">VÉGÉ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Notification -->
+                        <div
+                            class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border-l-4 border-brand-green flex items-center gap-3 animate-bounce hidden md:flex z-20">
+                            <div class="bg-green-100 p-2 rounded-full text-green-600">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Objectif Carbone Atteint</p>
+                                <p class="text-[10px] text-slate-500">-15% vs mois dernier</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Banner -->
+    <section class="py-10 border-y border-slate-100 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center reveal">
+            <p class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-8">L'outil de confiance des
+                gestionnaires publics</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale transition-all duration-500">
+                <div class="hover:grayscale-0 hover:opacity-100 transition cursor-pointer group">
+                    <span class="text-xl font-bold text-slate-600 group-hover:text-gov-blue flex items-center gap-2"><i
+                            class="fas fa-university text-2xl"></i> Mairies de France</span>
+                </div>
+                <div class="hover:grayscale-0 hover:opacity-100 transition cursor-pointer group">
+                    <span class="text-xl font-bold text-slate-600 group-hover:text-gov-blue flex items-center gap-2"><i
+                            class="fas fa-hospital text-2xl"></i> CHU Publics</span>
+                </div>
+                <div class="hover:grayscale-0 hover:opacity-100 transition cursor-pointer group">
+                    <span class="text-xl font-bold text-slate-600 group-hover:text-gov-blue flex items-center gap-2"><i
+                            class="fas fa-utensils text-2xl"></i> Crous</span>
+                </div>
+                <div class="hover:grayscale-0 hover:opacity-100 transition cursor-pointer group">
+                    <span
+                        class="text-xl font-bold text-slate-600 group-hover:text-brand-green flex items-center gap-2"><i
+                            class="fas fa-seedling text-2xl"></i> Ademe</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="py-24 bg-slate-50" id="probleme">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Le casse-tête du gestionnaire en 2025
+                </h2>
+                <p class="text-lg text-slate-600">Entre l'inflation, les lois qui durcissent et les attentes des
+                    parents, créer un menu est devenu une équation impossible sur Excel.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-1 reveal delay-100">
+                    <div
+                        class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-balance-scale-right"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Conformité Légale</h3>
+                    <p class="text-slate-600 leading-relaxed">Loi Egalim, Loi Climat... Les quotas changent tout le
+                        temps. Un simple oubli et votre collectivité est hors-la-loi.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-1 reveal delay-200">
+                    <div
+                        class="w-14 h-14 bg-yellow-50 text-yellow-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Budget Serré (< 2€)</h3>
+                            <p class="text-slate-600 leading-relaxed">Le bio coûte cher. Comment intégrer 20% de bio
+                                sans exploser le budget denrée par plateau et fâcher le comptable ?</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-1 reveal delay-300">
+                    <div
+                        class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Nutrition & Acceptation</h3>
+                    <p class="text-slate-600 leading-relaxed">Faire manger des épinards aux enfants ? Notre IA utilise
+                        le "Nudging" pour rendre les plats végétaux attractifs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Killer Feature: Heatmap -->
+    <section class="py-24 bg-gov-dark text-white overflow-hidden relative" id="heatmap">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+            <div class="absolute top-10 left-10 w-96 h-96 bg-blue-600 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-green rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div
+                        class="inline-block bg-brand-green/20 text-brand-green border border-brand-green/30 px-3 py-1 rounded-full text-xs font-bold uppercase mb-4 shadow-lg shadow-green-900/20">
+                        Exclusivité Cantine.OS
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">Prouvez votre responsabilité fiscale.
+                    </h2>
+                    <p class="text-slate-300 mb-8 text-lg leading-relaxed">
+                        Convaincre le conseil municipal est difficile. Notre <strong class="text-white">Heatmap
+                            Densité/Coût</strong> visualise instantanément pourquoi le menu végétarien est le choix
+                        intelligent.
+                    </p>
+                    <ul class="space-y-6 mb-8">
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-brand-green/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-chart-pie text-brand-green text-sm"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-white text-lg">Argumentaire clé en main</strong>
+                                <span class="text-sm text-slate-400">Exportez des graphiques clairs pour vos élus. Finis
+                                    les débats stériles.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-brand-green/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-euro-sign text-brand-green text-sm"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-white text-lg">Détection de Subventions</strong>
+                                <span class="text-sm text-slate-400">L'IA détecte si vos menus sont éligibles aux aides
+                                    ADEME/FEADER.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Interactive Vizualisation Mockup -->
+                <div
+                    class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl reveal delay-200 hover:bg-white/10 transition duration-500">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-8 text-center">Comparateur
+                        Densité Nutritionnelle vs Coût</h3>
+
+                    <!-- Chart Simulation -->
+                    <div class="relative h-72 border-l border-b border-slate-500/30 m-4">
+                        <!-- Labels Axis -->
+                        <div class="absolute -left-10 top-1/2 -translate-y-1/2 text-xs text-slate-400 -rotate-90">
+                            Densité Nutritionnelle</div>
+                        <div class="absolute bottom-[-25px] left-1/2 -translate-x-1/2 text-xs text-slate-400">Coût (€)
+                        </div>
+
+                        <!-- Grid lines -->
+                        <div
+                            class="absolute top-1/4 left-0 w-full h-px bg-slate-500/10 border-t border-dashed border-slate-500/20">
+                        </div>
+                        <div
+                            class="absolute top-2/4 left-0 w-full h-px bg-slate-500/10 border-t border-dashed border-slate-500/20">
+                        </div>
+                        <div
+                            class="absolute top-3/4 left-0 w-full h-px bg-slate-500/10 border-t border-dashed border-slate-500/20">
+                        </div>
+
+                        <!-- Data Point: Steak Frites -->
+                        <div
+                            class="absolute left-[80%] bottom-[20%] group cursor-pointer transition-all duration-300 hover:scale-110">
+                            <div class="w-4 h-4 bg-red-500 rounded-full shadow-lg shadow-red-500/50 relative z-10">
+                            </div>
+                            <div class="w-4 h-4 bg-red-500 rounded-full absolute top-0 left-0 animate-ping opacity-50">
+                            </div>
+
+                            <!-- Tooltip -->
+                            <div
+                                class="absolute bottom-6 -left-20 bg-white text-slate-900 text-xs p-3 rounded-lg shadow-xl w-40 hidden group-hover:block z-30 transform origin-bottom transition-all">
+                                <strong class="text-red-600 block mb-1">Steak Frites</strong>
+                                <div class="grid grid-cols-2 gap-1 text-[10px] text-slate-500">
+                                    <span>Coût:</span> <span class="text-right font-bold">2.80€</span>
+                                    <span>Nutri:</span> <span class="text-right font-bold">C</span>
+                                    <span>Carbone:</span> <span class="text-right font-bold text-red-600">High</span>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute top-6 left-1/2 -translate-x-1/2 text-[10px] text-red-300 whitespace-nowrap opacity-70">
+                                Steak-Frites</div>
+                        </div>
+
+                        <!-- Data Point: Lentilles (The Winner) -->
+                        <div
+                            class="absolute left-[20%] top-[20%] group cursor-pointer transition-all duration-300 hover:scale-110">
+                            <div
+                                class="w-6 h-6 bg-brand-green rounded-full shadow-[0_0_20px_rgba(16,185,129,0.5)] border-2 border-white relative z-10">
+                            </div>
+
+                            <!-- Tooltip -->
+                            <div
+                                class="absolute bottom-8 -left-12 bg-white text-slate-900 text-xs p-3 rounded-lg shadow-xl w-48 block z-30 transform origin-bottom">
+                                <div class="flex justify-between items-center mb-1">
+                                    <strong class="text-green-700">Mijoté de Lentilles</strong>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-[9px] px-1.5 py-0.5 rounded font-bold">TOP
+                                        CHOIX</span>
+                                </div>
+                                <div
+                                    class="grid grid-cols-2 gap-1 text-[10px] text-slate-500 border-t border-slate-100 pt-1 mt-1">
+                                    <span>Coût:</span> <span class="text-right font-bold text-green-600">0.65€</span>
+                                    <span>Fer/Fibres:</span> <span class="text-right font-bold text-green-600">A+</span>
+                                    <span>Subvention:</span> <span class="text-right font-bold text-brand-accent">Oui
+                                        (ADEME)</span>
+                                </div>
+                            </div>
+                            <!-- Connecting dashed line to origin to show efficiency -->
+                            <div class="absolute top-3 left-3 w-px h-40 border-l-2 border-dashed border-green-500/30">
+                            </div>
+                            <div class="absolute top-3 left-3 w-40 h-px border-t-2 border-dashed border-green-500/30">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="py-24 bg-white" id="solutions">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-3xl font-bold text-slate-900">Comment ça marche ?</h2>
+                <p class="text-slate-600 mt-2 text-lg">De votre liste de courses au menu servi, en 3 étapes simples.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Line connector for desktop -->
+                <div
+                    class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-slate-200 to-transparent -z-10">
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-12 text-center">
+                    <!-- Step 1 -->
+                    <div
+                        class="relative bg-white p-6 rounded-xl hover:shadow-lg transition duration-300 reveal delay-100 group">
+                        <div
+                            class="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-8 border-4 border-blue-50 shadow-sm relative z-10 group-hover:border-gov-blue transition duration-300">
+                            <span class="text-4xl font-bold text-gov-blue">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">Import Fournisseurs</h3>
+                        <p class="text-slate-500 leading-relaxed">Chargez votre fichier CSV actuel ou laissez l'IA
+                            trouver les producteurs locaux grâce à la géo-localisation intelligente.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div
+                        class="relative bg-white p-6 rounded-xl hover:shadow-lg transition duration-300 reveal delay-200 group">
+                        <div
+                            class="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-8 border-4 border-blue-50 shadow-sm relative z-10 group-hover:border-gov-blue transition duration-300">
+                            <span class="text-4xl font-bold text-gov-blue">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">Constraint Solver</h3>
+                        <p class="text-slate-500 leading-relaxed">Notre moteur algorithmique croise vos ingrédients avec
+                            50+ contraintes légales (Egalim, GEMRCN) et votre budget cible.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div
+                        class="relative bg-white p-6 rounded-xl hover:shadow-lg transition duration-300 reveal delay-300 group">
+                        <div
+                            class="w-24 h-24 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-8 border-4 border-white shadow-lg shadow-green-200 relative z-10 transform scale-110">
+                            <i class="fas fa-check text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">Menu & Nudging</h3>
+                        <p class="text-slate-500 leading-relaxed">Génération instantanée du planning. L'IA réécrit les
+                            titres des plats pour les rendre appétissants et réduire le gaspillage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON SECTION (NEW) -->
+    <section class="py-24 bg-slate-50" id="comparatif">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl font-bold text-slate-900">Pourquoi changer vos habitudes ?</h2>
+                <p class="text-slate-600 mt-2 text-lg">Arrêtez le bricolage sur Excel. Passez à la vitesse supérieure.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center reveal delay-200">
+                <!-- Old Way -->
+                <div
+                    class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm opacity-70 hover:opacity-100 transition">
+                    <h3 class="text-xl font-bold text-slate-600 mb-6 flex items-center gap-3">
+                        <i class="fas fa-file-excel text-red-500 text-2xl"></i> Gestion Classique (Excel)
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-times text-red-400 mt-1"></i>
+                            <span class="text-slate-600">Calcul manuel des 20% bio (erreurs fréquentes)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-times text-red-400 mt-1"></i>
+                            <span class="text-slate-600">Pas d'optimisation des coûts fournisseurs</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-times text-red-400 mt-1"></i>
+                            <span class="text-slate-600">Aucune donnée sur l'impact carbone</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-times text-red-400 mt-1"></i>
+                            <span class="text-slate-600">4h à 8h de travail par mois</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- New Way -->
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-gov-blue shadow-xl relative overflow-hidden transform scale-105">
+                    <div
+                        class="absolute top-0 right-0 bg-gov-blue text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        RECOMMANDÉ</div>
+                    <h3 class="text-xl font-bold text-gov-blue mb-6 flex items-center gap-3">
+                        <i class="fas fa-robot text-brand-green text-2xl"></i> Cantine.OS
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-green mt-1"></i>
+                            <span class="text-slate-800 font-medium">Conformité légale 100% garantie</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-green mt-1"></i>
+                            <span class="text-slate-800 font-medium">Suggestion intelligente des plats les moins
+                                chers</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-green mt-1"></i>
+                            <span class="text-slate-800 font-medium">Heatmap Carbone/Budget en temps réel</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-brand-green mt-1"></i>
+                            <span class="text-slate-800 font-medium">Génération en 30 secondes chrono</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION (NEW) -->
+    <section class="py-24 bg-white border-y border-slate-100" id="temoignages">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-16">Ils ont adopté Cantine.OS</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 p-6 rounded-2xl relative reveal">
+                    <div class="text-brand-accent text-4xl absolute -top-4 -left-2 opacity-30"><i
+                            class="fas fa-quote-left"></i></div>
+                    <p class="text-slate-600 italic mb-6 relative z-10">"Enfin un outil qui comprend les contraintes
+                        d'une petite mairie. J'ai réduit mes coûts denrées de 12% dès le premier mois tout en respectant
+                        Egalim."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-slate-500 font-bold">
+                            SP</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Sophie P.</p>
+                            <p class="text-xs text-slate-500">Maire de Trifouillis-les-Oies</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 p-6 rounded-2xl relative reveal delay-100">
+                    <div class="text-brand-accent text-4xl absolute -top-4 -left-2 opacity-30"><i
+                            class="fas fa-quote-left"></i></div>
+                    <p class="text-slate-600 italic mb-6 relative z-10">"La Heatmap est mon arme secrète pour justifier
+                        les menus végétariens devant le conseil des parents d'élèves. C'est factuel et visuel."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-slate-500 font-bold">
+                            KB</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Karim B.</p>
+                            <p class="text-xs text-slate-500">Gestionnaire Cité Scolaire</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 p-6 rounded-2xl relative reveal delay-200">
+                    <div class="text-brand-accent text-4xl absolute -top-4 -left-2 opacity-30"><i
+                            class="fas fa-quote-left"></i></div>
+                    <p class="text-slate-600 italic mb-6 relative z-10">"L'import automatique des fournisseurs m'a fait
+                        gagner un temps fou. Je ne retourne plus sur Excel que par nostalgie (non, je rigole)."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-slate-500 font-bold">
+                            ML</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Marie L.</p>
+                            <p class="text-xs text-slate-500">Diététicienne Hôpital Public</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-slate-50" id="faq">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <h2 class="text-3xl font-bold text-slate-900 text-center mb-12">Questions Fréquentes</h2>
+
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                        onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        <span class="font-bold text-slate-800">Est-ce compatible avec mon logiciel de gestion actuel
+                            ?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden text-slate-600 border-t border-slate-100 pt-4">
+                        Oui. Cantine.OS permet d'exporter les menus aux formats CSV, PDF et Excel, compatibles avec la
+                        plupart des ERP du marché (Adoria, Easilys, etc.).
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                        onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        <span class="font-bold text-slate-800">Comment sont calculées les valeurs nutritionnelles
+                            ?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden text-slate-600 border-t border-slate-100 pt-4">
+                        Nous utilisons la base de données CIQUAL de l'ANSES, mise à jour en temps réel. Chaque recette
+                        est recalculée au gramme près.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                        onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        <span class="font-bold text-slate-800">Proposez-vous un accompagnement pour la prise en main
+                            ?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden text-slate-600 border-t border-slate-100 pt-4">
+                        Absolument. Chaque mairie bénéficie d'une demi-journée de formation en visio pour configurer ses
+                        fournisseurs et ses contraintes spécifiques.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Bottom -->
+    <section class="py-24 bg-white border-t border-slate-100 relative overflow-hidden" id="demo">
+        <div class="absolute inset-0 bg-blue-50/50 -skew-y-3 transform origin-bottom-right scale-110 z-0"></div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10 reveal">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Rejoignez les mairies pionnières.</h2>
+            <p class="text-xl text-slate-600 mb-10">Ne passez plus vos week-ends à calculer des grammes de protéines.
+                Laissez Cantine.OS gérer la complexité pour vous.</p>
+
+            <div
+                class="bg-white p-2 rounded-2xl shadow-xl border border-slate-200 max-w-lg mx-auto flex flex-col sm:flex-row gap-2">
+                <input type="email" placeholder="Email professionnel (ex: mairie@ville.fr)"
+                    class="flex-1 px-6 py-4 rounded-xl border-none focus:outline-none focus:ring-2 focus:ring-gov-blue/20 text-slate-800"
+                    required>
+                <button type="button" onclick="alert('Merci pour votre intérêt ! L\'équipe vous contactera sous 24h.')"
+                    class="bg-gov-blue text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-blue-800 transition whitespace-nowrap">
+                    Demander l'accès
+                </button>
+            </div>
+            <p class="text-xs text-slate-400 mt-6 flex justify-center items-center gap-2">
+                <i class="fas fa-lock"></i> Pas de carte bancaire requise. Essai gratuit de 30 jours.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div
+                            class="w-8 h-8 bg-gov-blue rounded-lg flex items-center justify-center text-white font-bold">
+                            C</div>
+                        <span class="font-bold text-xl tracking-tight">Cantine<span
+                                class="text-brand-green">.OS</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        La solution n°1 pour automatiser la conformité Egalim et optimiser les budgets des cantines
+                        scolaires.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Produit</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white transition">Générateur de Menus</a></li>
+                        <li><a href="#" class="hover:text-white transition">Calculateur Carbone</a></li>
+                        <li><a href="#" class="hover:text-white transition">Base de Recettes</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Ressources</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white transition">Loi Egalim expliquée</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Centre d'aide</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><i class="fas fa-envelope mr-2"></i> contact@cantine.os</li>
+                        <li><i class="fas fa-phone mr-2"></i> 01 23 45 67 89</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Station F, Paris</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-sm text-slate-500">
+                    &copy; 2025 Cantine.OS - Projet Hackathon. Tous droits réservés.
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i
+                            class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i
+                            class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i
+                            class="fab fa-github text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+
+        // Typewriter Effect
+        const words = ["Egalim automatisée.", "Budgétaire maîtrisée.", "Carbone optimisée."];
+        let i = 0;
+        let timer;
+
+        function typeWriter() {
+            const heading = document.getElementById("typewriter");
+            if (!heading) return;
+
+            const word = words[i];
+            const currentText = heading.innerText;
+
+            if (currentText.length < word.length) {
+                heading.innerText = word.substring(0, currentText.length + 1);
+                timer = setTimeout(typeWriter, 100);
+            } else {
+                setTimeout(erase, 2000);
+            }
+        }
+
+        function erase() {
+            const heading = document.getElementById("typewriter");
+            if (!heading) return;
+
+            const currentText = heading.innerText;
+
+            if (currentText.length > 0) {
+                heading.innerText = currentText.substring(0, currentText.length - 1);
+                timer = setTimeout(erase, 50);
+            } else {
+                i = (i + 1) % words.length;
+                setTimeout(typeWriter, 500);
+            }
+        }
+
+        // Start typewriter on load
+        document.addEventListener('DOMContentLoaded', () => {
+            typeWriter();
+        });
+
+    </script>
+</body>
+
+</html>

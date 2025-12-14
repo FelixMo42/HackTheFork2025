@@ -1,0 +1,183 @@
+{
+    "stocks": [
+        {
+            "id": "stock_001",
+            "produit_id": "p001",
+            "produit_nom": "Lentilles vertes du Puy",
+            "categorie": "legumineuses",
+            "quantite_actuelle": 25.5,
+            "unite": "kg",
+            "quantite_min": 10,
+            "emplacement": "Réserve sèche",
+            "dlc": null,
+            "fournisseur_id": "f001",
+            "fournisseur_nom": "Ferme du Soleil",
+            "dernier_mouvement": "2024-12-13"
+        },
+        {
+            "id": "stock_002",
+            "produit_id": "p002",
+            "produit_nom": "Carottes bio",
+            "categorie": "legumes",
+            "quantite_actuelle": 15.0,
+            "unite": "kg",
+            "quantite_min": 20,
+            "emplacement": "Chambre froide",
+            "dlc": "2024-12-20",
+            "fournisseur_id": "f001",
+            "fournisseur_nom": "Ferme du Soleil",
+            "dernier_mouvement": "2024-12-12"
+        },
+        {
+            "id": "stock_003",
+            "produit_id": "p020",
+            "produit_nom": "Yaourt nature bio",
+            "categorie": "produit_laitier",
+            "quantite_actuelle": 8.5,
+            "unite": "kg",
+            "quantite_min": 5,
+            "emplacement": "Chambre froide",
+            "dlc": "2024-12-18",
+            "fournisseur_id": "f003",
+            "fournisseur_nom": "Laiterie des Cévennes",
+            "dernier_mouvement": "2024-12-11"
+        },
+        {
+            "id": "stock_004",
+            "produit_id": "p030",
+            "produit_nom": "Poulet fermier",
+            "categorie": "viande",
+            "quantite_actuelle": 5.0,
+            "unite": "kg",
+            "quantite_min": 10,
+            "emplacement": "Chambre froide négative",
+            "dlc": "2024-12-16",
+            "fournisseur_id": "f004",
+            "fournisseur_nom": "Volailles du Languedoc",
+            "dernier_mouvement": "2025-12-14"
+        },
+        {
+            "id": "stock_005",
+            "produit_id": "p041",
+            "produit_nom": "Pâtes sèches",
+            "categorie": "feculents",
+            "quantite_actuelle": 45.0,
+            "unite": "kg",
+            "quantite_min": 15,
+            "emplacement": "Réserve sèche",
+            "dlc": "2025-06-01",
+            "fournisseur_id": "f005",
+            "fournisseur_nom": "ProDistrib Épicerie",
+            "dernier_mouvement": "2024-12-08"
+        },
+        {
+            "id": "stock_006",
+            "produit_id": "p043",
+            "produit_nom": "Lentilles corail",
+            "categorie": "legumineuses",
+            "quantite_actuelle": 12.0,
+            "unite": "kg",
+            "quantite_min": 8,
+            "emplacement": "Réserve sèche",
+            "dlc": "2025-04-15",
+            "fournisseur_id": "f005",
+            "fournisseur_nom": "ProDistrib Épicerie",
+            "dernier_mouvement": "2024-12-05"
+        },
+        {
+            "id": "stock_007",
+            "produit_id": "p031",
+            "produit_nom": "Oeufs fermiers plein air",
+            "categorie": "oeufs",
+            "quantite_actuelle": 5,
+            "unite": "douzaine",
+            "quantite_min": 10,
+            "emplacement": "Chambre froide",
+            "dlc": "2024-12-28",
+            "fournisseur_id": "f004",
+            "fournisseur_nom": "Volailles du Languedoc",
+            "dernier_mouvement": "2024-12-13"
+        },
+        {
+            "id": "stock_008",
+            "produit_id": "p040",
+            "produit_nom": "Huile d'olive extra vierge",
+            "categorie": "epicerie",
+            "quantite_actuelle": 18.0,
+            "unite": "litre",
+            "quantite_min": 5,
+            "emplacement": "Réserve sèche",
+            "dlc": "2025-12-01",
+            "fournisseur_id": "f005",
+            "fournisseur_nom": "ProDistrib Épicerie",
+            "dernier_mouvement": "2024-12-01"
+        },
+        {
+            "id": "stock_test_1",
+            "produit_id": "p001",
+            "produit_nom": "Lentilles corail",
+            "categorie": "legumineuses",
+            "quantite_actuelle": 5.0,
+            "unite": "kg",
+            "quantite_min": 0,
+            "emplacement": "",
+            "dlc": "2025-12-16",
+            "fournisseur_id": "",
+            "fournisseur_nom": "Test",
+            "dernier_mouvement": "2025-12-14"
+        },
+        {
+            "id": "stock_test_2",
+            "produit_id": "p002",
+            "produit_nom": "Poulet",
+            "categorie": "viande",
+            "quantite_actuelle": 10.0,
+            "unite": "kg",
+            "quantite_min": 0,
+            "emplacement": "",
+            "dlc": "2025-06-01",
+            "fournisseur_id": "",
+            "fournisseur_nom": "Test",
+            "dernier_mouvement": "2025-12-14"
+        }
+    ],
+    "mouvements": [
+        {
+            "id": "mvt_001",
+            "stock_id": "stock_001",
+            "type": "entree",
+            "quantite": 20,
+            "date": "2024-12-13",
+            "motif": "Livraison fournisseur"
+        },
+        {
+            "id": "mvt_002",
+            "stock_id": "stock_002",
+            "type": "sortie",
+            "quantite": 5,
+            "date": "2024-12-12",
+            "motif": "Préparation menu"
+        },
+        {
+            "id": "mvt_003",
+            "stock_id": "stock_004",
+            "type": "sortie",
+            "quantite": 8,
+            "date": "2024-12-10",
+            "motif": "Préparation menu"
+        },
+        {
+            "id": "mvt_004",
+            "stock_id": "stock_004",
+            "type": "entree",
+            "quantite": 2.0,
+            "date": "2025-12-14",
+            "motif": "Préparation menu"
+        }
+    ],
+    "meta": {
+        "version": "1.0",
+        "last_updated": "2025-12-14",
+        "description": "Inventaire des stocks de la cantine"
+    }
+}
