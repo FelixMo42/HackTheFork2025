@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/Sidebar";
 import { Header } from "@/components/Header";
-import { NotificationProvider } from "@/lib/notifications";
+import { Providers } from "@/components/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="h-full bg-gray-50">
       <body className={`${inter.className} h-full`}>
-        <NotificationProvider>
+        <Providers>
           <Sidebar />
           <div className="pl-64 flex flex-col min-h-screen">
             <Header />
@@ -30,7 +30,7 @@ export default function RootLayout({
               </div>
             </main>
           </div>
-        </NotificationProvider>
+        </Providers>
       </body>
     </html>
   );
