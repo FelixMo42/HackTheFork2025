@@ -1,5 +1,7 @@
 # Hack The Fork 2025
 
-## Canteen CRM
+## Cantine OS
 
-## Canteen Scraper
+## Cantine CRM
+
+## Cantine Scraper
