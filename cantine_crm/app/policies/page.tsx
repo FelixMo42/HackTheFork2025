@@ -1,4 +1,5 @@
 import { db } from '@/lib/db'
+import Link from 'next/link'
 
 export default async function IndicatorsPage({
     searchParams,
@@ -54,7 +55,9 @@ export default async function IndicatorsPage({
                         {(await db.getWorstPerformingCanteens()).map(c => (
                             <li key={c.id} className="p-4 flex justify-between items-center bg-red-50/50">
                                 <div className="min-w-0 flex-1 mr-4">
-                                    <p className="font-medium text-gray-900 truncate" title={c.name}>{c.name}</p>
+                                    <Link href={`/canteens/${c.id}`} className="font-medium text-gray-900 truncate hover:text-indigo-600 hover:underline" title={c.name}>
+                                        {c.name}
+                                    </Link>
                                     <p className="text-xs text-gray-500">{c.city}</p>
                                 </div>
                                 <div className="flex items-center gap-4 text-sm">
@@ -80,7 +83,9 @@ export default async function IndicatorsPage({
                         {canteens.slice(0, 50).map(c => (
                             <li key={c.id} className="p-4 hover:bg-gray-50 transition flex justify-between items-center">
                                 <div>
-                                    <p className="font-medium text-gray-900">{c.name}</p>
+                                    <Link href={`/canteens/${c.id}`} className="font-medium text-gray-900 hover:text-indigo-600 hover:underline">
+                                        {c.name}
+                                    </Link>
                                     <p className="text-xs text-gray-500">{c.city}</p>
                                 </div>
                                 <div className="flex gap-2">

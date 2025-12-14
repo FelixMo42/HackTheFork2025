@@ -71,7 +71,10 @@ export default async function Dashboard() {
                 <li key={canteen.name} className="py-5">
                   <div className="relative focus-within:ring-2 focus-within:ring-indigo-500">
                     <h3 className="text-sm font-semibold text-gray-800">
-                      {canteen.name}
+                      <Link href={`/canteens/${canteen.id}`} className="hover:underline focus:outline-none">
+                        <span className="absolute inset-0" aria-hidden="true" />
+                        {canteen.name}
+                      </Link>
                     </h3>
                     <p className="text-sm text-gray-500">{canteen.city} &middot; {canteen.sector}</p>
                     <div className="mt-2 flex items-center gap-2 text-xs text-gray-500">

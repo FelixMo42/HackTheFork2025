@@ -26,6 +26,7 @@ export interface Canteen {
     year?: number;
     // Helper for map if coordinates ever come back
     coordinates?: { lat: number; lng: number };
+    aiReport?: string;
 }
 
 export const db = {
@@ -115,5 +116,28 @@ export const db = {
                 return qualA - qualB;
             })
             .slice(0, limit);
+    },
+
+    async getById(id: number): Promise<Canteen | null> {
+        const canteens = await this.getAll();
+        return canteens.find(c => c.id === id) || null;
+    },
+
+    async saveReport(id: number, report: string): Promise<void> {
+        try {
+            // Read raw data to preserve structure effectively
+            const dataStr = await fs.readFile(DATA_FILE, 'utf-8');
+            const canteens: Omit<Canteen, 'id' | 'coordinates'>[] = JSON.parse(dataStr);
+
+            if (id >= 0 && id < canteens.length) {
+                // @ts-ignore - The JSON structure accepts extra fields, extending type loosely here for persistence
+                canteens[id].aiReport = report;
+
+                await fs.writeFile(DATA_FILE, JSON.stringify(canteens, null, 2), 'utf-8');
+            }
+        } catch (error) {
+            console.error("Error saving report:", error);
+            throw error;
+        }
     }
 };

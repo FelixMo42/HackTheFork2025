@@ -25,7 +25,11 @@ export default async function CanteensPage({
                     <tbody className="divide-y divide-gray-200">
                         {canteens.map((canteen) => (
                             <tr key={canteen.id}>
-                                <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 max-w-xs truncate" title={canteen.name}>{canteen.name}</td>
+                                <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 max-w-xs truncate" title={canteen.name}>
+                                    <a href={`/canteens/${canteen.id}`} className="hover:text-indigo-600 hover:underline">
+                                        {canteen.name}
+                                    </a>
+                                </td>
                                 <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{canteen.city}</td>
                                 <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{canteen.sector}</td>
                                 <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{canteen.bioPercentage ? `${canteen.bioPercentage}%` : '-'}</td>
